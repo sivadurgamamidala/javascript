@@ -1,0 +1,15 @@
+#aa{
+    text-align: center;
+    font-weight: 700;
+    font-style: oblique;
+    font-family: sans-serif;
+    color: purple;
+}
+#demo3, #demo5, #demo7, #demo9{
+    font-weight: bold;
+    color: darkorchid;
+}
+#demo4, #demo6, #demo8, #demo10{
+    font-weight: bold;
+    color: rgb(71, 78, 78)
+}

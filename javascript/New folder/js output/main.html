@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js output</title>
+    
+</head>
+<body>
+    <div >
+        my name is <span id="demo"></span>
+    </div>
+    <p id="siva"></p>
+    
+    <script>
+        // Writing into an HTML element, using innerHTML.
+        document.getElementById("demo").innerHTML="mamidala siva durga teja";
+    </script>
+    <div>
+        
+        <script>
+            // Writing into the HTML output using document.write().
+            // the document.write() method should only be used for testing.
+            document.write("Age: "+(20+4));
+        </script>
+        <button type="button" onclick="document.write(20+30+50)">click</button>
+    </div>
+    <div>
+        <script>
+            //writing into an alert box, using window.alert().
+            window.alert(1+5+3+1+9+9+5);
+            //Writing into the browser console, using console.log().
+            console.log(1+5+3+1+9+9+5);
+        </script>
+        <!-- The only exception is that you can call the window.print() method in the browser to print the content of the current window. -->
+        <button onclick="window.print()">Print</button>
+    </div>
+</body>
+</html>
+long N = Convert.ToInt64(Console.ReadLine());
+        long[] x = new long[N];
+        long[] y = new long[N];
+        long[] Powerpuff_Girls = new long[N];
+        
+        long min;
+        if(N>=1 && N <= 10000000)
+        {
+            string o = Console.ReadLine();
+            for (long i = 0; i < N; i++)
+            {
+
+                x[i] = Convert.ToInt64(o.Split(' ')[i]);
+            }
+            string p = Console.ReadLine();
+            for (long i = 0; i < N; i++)
+            {
+                y[i] = Convert.ToInt64(p.Split(' ')[i]);
+                if (y[i] < 0)
+                {
+                    y[i] = 0;
+                }
+            }
+            for (long i = 0; i < N; i++)
+            {
+                Powerpuff_Girls[i] = (y[i] / x[i]);
+            }
+            min = Powerpuff_Girls[0];
+            for (long i = 0; i < N; i++)
+            {
+                if (Powerpuff_Girls[i] < min)
+                {
+                    min = Powerpuff_Girls[i];
+                }
+            }
+            Console.WriteLine(min);
+        }

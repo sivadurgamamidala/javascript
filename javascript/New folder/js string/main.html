@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js string</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo0"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <script>
+        var x="shiva durga teja ";
+        var y='mamidala'
+        var a=new String("mamidala");
+        var b=new String("mamidala");
+        var z=x.length+y.length;
+        document.getElementById("demo").innerHTML=x;
+        document.getElementById("demo0").innerHTML=x+y;
+        document.getElementById("demo1").innerHTML="X lengh: "+x.length;
+        document.getElementById("demo2").innerHTML="Y lengh: "+y.length;
+        document.getElementById("demo3").innerHTML="(X+Y) Length: "+z;
+        document.getElementById(demo7).innerHTML=x+y; //use addition '+' symbol to break up the string
+        document.getElementById("demo4").innerHTML=(y==a); //this expression compares only value -->'(mamidala = mamidala) return true '
+        document.getElementById("demo5").innerHTML=(y===a); //this expression compare both value and type -->'(mamidala = mamidala and string != object) return false
+        document.getElementById("demo6").innerHTML=(a==b); //this expression compare only value -->'Comparing two JavaScript objects will always return false'
+    </script>
+</body>
+</html>

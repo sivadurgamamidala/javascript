@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+    <link rel="stylesheet" href="main.css">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script>
+    
+        function myfunction1(){
+            document.getElementById("teja").innerHTML="KOLA TULASI SAI PRIYA";
+        }
+    </script>
+   <!--<script src="main.js"></script>--> 
+</head>
+<body>
+    <p id="p">javascript can change content, style and attribute values. And also it can hide/show the HTML element</p>
+    <div id="siva">Hai click on button if you want to know my name</div>
+    <button type="button" class="btn btn-outline-success" onclick="document.getElementById('siva').innerHTML='hello shiva'">Click</button>
+    <div>
+        <img id="img" src="images/1.jpg" alt="1.jpg" >
+        <button type="button" class="btn btn-outline-warning" onclick="document.getElementById('img').src='images/2.jpg'">Next Image</button>
+        <button type="button" class="btn btn-outline-warning" onclick="document.getElementById('img').src='images/1.jpg'">Previous Image</button>
+    </div>
+    <div>
+        <p id="style">shiva durga mamidala</p>
+        <button type="button" class="btn btn-outline-primary" onclick="document.getElementById('style').style.textTransform='uppercase'">Change to uppercase</button>
+    </div>
+<div>
+    <button type="button" class="btn btn-outline-primary" onclick="document.getElementById('style').style.display='none'">click here To Hide shiva durga mamidala</button>
+    <button type="button" class="btn btn-outline-primary" onclick="document.getElementById('style').style.display='block'">click here To Show shiva durga mamidala</button>
+</div>
+<div>
+    <p id="durga">m siva durga teja</p>
+    <button type="button" class="btn btn-outline-danger" onclick="myfunction()">change name</button>
+</div>
+<div>
+    <p id="teja">m tulasi sai priya</p>
+    <button type="button" class="btn btn-outline-danger" onclick="myfunction1()">change name</button>
+</div>
+<div>
+    <p id="mamidala">m giri babu and m vani kumari</p>
+    <button type="button" class="btn btn-outline-danger" onclick="myfunction2()">change name</button>
+</div>
+<script>
+    
+    function myfunction(){
+        document.getElementById("durga").innerHTML="MAMIDALA SIVA DURGA TEJA";
+    }
+</script>
+<script src="main.js"></script>
+</body>
+</html>

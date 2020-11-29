@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js array sort</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <button onclick="myfun()" style="float: left; margin-top: -3px; margin-right: 10px;">Click Here to perform random arrangement</button>
+    <span style="float: left;">"</span><p id="demo5" style="float: left; margin-top: -1px;"></p><span style="float: left;">"</span><br><br>
+    <button onclick="myfun1()" style="float: left; margin-top: -3px; margin-right: 10px;">Click Here to perform random arrangement(The Fisher Yates Method)</button>
+    <span style="float: left;">"</span><p id="demo6" style="float: left; margin-top: -1px;"></p><span style="float: left;">"</span><br><br>
+    <button onclick="myfun2()" style="float: left; margin-top: -3px; margin-right: 10px;">Click Here to find the highest value of array</button>
+    <p id="demo7" style="float: left; margin-top: -1px;"></p><br><br>
+    <button onclick="myfun3()" style="float: left; margin-top: -3px; margin-right: 10px;">Click Here to find the smallest value of array</button>
+    <p id="demo8" style="float: left; margin-top: -1px;"></p><br><br>
+    <button onclick="myfun4(numbers1)" style="float: left; margin-top: -3px; margin-right: 10px;">Click Here to find the highest value of array('Using Math.max()')</button>
+    <p id="demo9" style="float: left; margin-top: -1px;"></p><br><br>
+    <button onclick="myfun5(numbers1)" style="float: left; margin-top: -3px; margin-right: 10px;">Click Here to find the smallest value of array('Using Math.min()')</button>
+    <p id="demo10" style="float: left; margin-top: -1px;"></p><br><br>
+    <button onclick="myfun6(numbers1)" style="float: left; margin-top: -3px; margin-right: 10px;">Click Here to find the highest value of array('Using loop')</button>
+    <p id="demo11" style="float: left; margin-top: -1px;"></p><br><br>
+    <button onclick="myfun7(numbers1)" style="float: left; margin-top: -3px; margin-right: 10px;">Click Here to find the smallest value of array('Using loop')</button>
+    <p id="demo12" style="float: left; margin-top: -1px;"></p><br><br>
+    <button onclick="displaysortbyyear()" style="float: left;">sorting by year</button><button onclick="displaysortbyname()">sorting by type</button><br><br>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+    <p id="demo15"></p>
+    <p id="demo16"></p>
+    <p id="demo17"></p>
+    <p id="demo18"></p>
+    <p id="demo19"></p>
+    <p id="demo20"></p>
+    
+    <script>
+        var fruits=["mango", "pineapple", "banana","orange"];
+        var numbers=[25,82,56,85,71,26,62,100];
+        var numbers1=[25,82,56,85,71,26,62,100];
+        document.getElementById("demo1").innerHTML="original array of fruits: "+fruits;
+        document.getElementById("demo2").innerHTML="After sorting fruits: "+fruits.sort();
+        document.getElementById("demo3").innerHTML="original array of numbers: "+numbers;
+        document.getElementById("demo4").innerHTML="After sorting numbers: "+numbers.sort(function(a,b){return a-b});
+        document.getElementById("demo5").innerHTML=numbers;
+        function myfun(){
+           numbers.sort(function(a,b){return 0.5-Math.random();});
+           document.getElementById("demo5").innerHTML=numbers;
+        }
+        document.getElementById("demo6").innerHTML=numbers;
+        function myfun1(){
+            var i,j,k;
+            for(i=numbers.length -1;i>0; i--){
+                j=Math.floor(Math.random() * i);
+                k=numbers[i];
+                numbers[i]=numbers[j];
+                numbers[j]=k;
+            }
+            document.getElementById("demo6").innerHTML=numbers;
+        }
+        document.getElementById("demo7").innerHTML=numbers1;
+        function myfun2(){
+            numbers1.sort(function(a,b){return b-a;});
+            document.getElementById("demo7").innerHTML="25,82,56,85,71,26,62,100 : "+"largest numbers is "+numbers1[0];
+        }
+        document.getElementById("demo8").innerHTML=numbers1;
+        function myfun3(){
+            numbers1.sort(function(a,b){return a-b;});
+            document.getElementById("demo8").innerHTML="25,82,56,85,71,26,62,100 : "+"smallest numbers is "+numbers1[0];
+        }
+        //Using Math.max() on an Array
+        //Using Math.max() finding the largest value
+        document.getElementById("demo9").innerHTML=numbers1;
+        function myfun4(numbers1){
+            document.getElementById("demo9").innerHTML="25,82,56,85,71,26,62,100 "+"max number is "+ (Math.max.apply(null,numbers1));
+        }
+        //Using Math.min() on an Array
+        //Using Math.min() finding the smallest value
+        document.getElementById("demo10").innerHTML=numbers1;
+        function myfun5(numbers1){
+            document.getElementById("demo10").innerHTML="25,82,56,85,71,26,62,100 "+"min number is "+ (Math.min.apply(null,numbers1));
+        }
+        //The fastest solution is to use a "home made" method.(using loop finding largest value)
+        document.getElementById("demo11").innerHTML=numbers1;
+        function myfun6(numbers1){
+            var max=-Infinity;
+            var i=numbers1.length;
+            while(i--){
+                if(numbers1[i]>max){
+                    max=numbers1[i]
+                }
+            }
+            document.getElementById("demo11").innerHTML="25,82,56,85,71,26,62,100 "+"max number is "+max;
+        }
+        //The fastest solution is to use a "home made" method.(using loop finding smallest value)
+        document.getElementById("demo12").innerHTML= numbers1;
+        function myfun7(numbers1){
+            var min=Infinity;
+            var i=numbers1.length;
+            while(i--){
+                if(numbers1[i]<min){
+                    min=numbers1[i]
+                }
+            }
+            document.getElementById("demo12").innerHTML="25,82,56,85,71,26,62,100 "+"min number is "+min;
+        }
+        var cars = [
+            {type:"Volvo", year:2016},
+            {type:"Saab", year:2001},
+            {type:"BMW", year:2010}
+        ];
+        display();
+        function displaysortbyyear(){
+            cars.sort(function(a, b){return a.year - b.year});
+            display();
+        }
+        function displaysortbyname(){
+            cars.sort(function(a, b){
+                var x=a.type.toLowerCase();
+                var y=b.type.toLowerCase();
+                if(x<y){
+                    return -1;
+                }
+                if(x>y){
+                    return 1;
+                }
+                return 0;
+            });
+            document.getElementById("demo13").innerHTML=cars[0].type +", "+cars[0].year+"<br>"+cars[1].type +", "+cars[1].year+"<br>"+cars[2].type +", "+cars[2].year;
+        }
+        function display(){
+            document.getElementById("demo13").innerHTML=cars[0].type +", "+cars[0].year+"<br>"+cars[1].type +", "+cars[1].year+"<br>"+cars[2].type +", "+cars[2].year;
+        }
+    </script>
+</body>
+</html>

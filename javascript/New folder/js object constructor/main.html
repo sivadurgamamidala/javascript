@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js object constructor</title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <h3>js object constructor</h3>
+    <p id="demo1">*</p>
+    <p id="demo2">*</p>
+    <p id="demo3">*</p>
+    <p id="demo4">*</p>
+    <p id="demo5">*</p>
+    <p id="demo6">*</p>
+    <p id="demo7">*</p>
+    <p id="demo8">*</p>
+    <p id="demo9">*</p>
+    <p id="demo10">*</p>
+    <script>
+        function employee(fname, lname, age, salary){
+          this.firstname = fname;
+          this.lastname = lname;
+          this.age = age;
+          this.salary = salary;
+          this.city = "narasaraopet";//this will refer all object to which it calls
+          this.name = function(){return this.firstname+" "+this.lastname+"<br>"+this.fullname()}//Adding a Method to a Constructor
+          this.changeName = function(value){return this.firstname = value};//by using this function we can change the firstname
+        }
+        var obj = new employee("shiva durga teja", "mamidala", 25, 50000);
+        var obj1 = new employee("shiva durga teja", "mamidala", 25, 50000);
+        //adding property to an object
+        obj.nationality="English";
+        //adding method to an object
+        obj.fullname = function(){
+            return this.firstname+" "+this.lastname;
+        }
+        //you can not add new property to constructor. 
+        employee.country="India";//it display result is undefined
+        console.log(obj.country);
+        obj.changeName("vani kumari");//changing sivadurgateja to vani kumari
+        console.log(obj.firstname);
+        document.getElementById("demo1").innerHTML=obj.firstname;
+        document.getElementById("demo2").innerHTML=obj1.firstname;
+        document.getElementById("demo3").innerHTML=obj.nationality;
+        document.getElementById("demo4").innerHTML=obj.fullname();
+        document.getElementById("demo5").innerHTML=obj.country;
+        document.getElementById("demo6").innerHTML="employee1 city: "+obj.city+"<br>"+"employee2 city: "+obj1.city;
+        document.getElementById("demo7").innerHTML=obj.name();
+        document.getElementById("demo8").innerHTML=obj.firstname;
+        document.getElementById("demo9").innerHTML="";
+
+
+
+    </script>
+</body>
+</html>

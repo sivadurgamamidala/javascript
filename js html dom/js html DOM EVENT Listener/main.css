@@ -1,0 +1,10 @@
+#mybtn{
+    margin: 20px 20px;
+}
+input:focus{
+    background-color: green;
+    color: white;
+}
+input{
+    background-color: lightgreen;
+}

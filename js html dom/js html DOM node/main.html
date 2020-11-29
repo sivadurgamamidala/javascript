@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript HTML DOM Elements (Nodes)</title>
+</head>
+<body>
+    <div id="div1">
+        <p id="p1">this is shiva</p>
+        <p id="p2">this is shiva durga</p>
+    </div>
+    <button id="btn" onclick="myfunction()">remove this is shiva durga</button>
+    <button id="btn" onclick="myfunction1()">remove this is shiva</button>
+    <button id="btn" onclick="myfunction2()">replace "this is shiva durga" to "Hello vanikumari"</button>
+    <script>
+        var para = document.createElement("p");
+        var node = document.createTextNode("vanikumari");
+        para.appendChild(node);
+        var element = document.getElementById("div1");//parent node
+        // element.appendChild(para);//vanikumari will display at last
+        var child = document.getElementById("p1");//child node
+        element.insertBefore(para,p1)////vanikumari will display at first
+
+        function myfunction(){
+            var element1 = document.getElementById("p2");//child node
+            element1.remove();
+        }
+        function myfunction1(){
+            var element2 =document.getElementById("p1");//child node
+            element.removeChild(element2);
+        }
+        function myfunction2(){
+            var element1 = document.getElementById("p2");//child node
+            element.replaceChild(para,element1);
+        }
+    </script>
+</body>
+</html>

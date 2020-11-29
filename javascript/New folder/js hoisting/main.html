@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js Hoisting</title>
+</head>
+<body>
+    <div>
+        <h3>JavaScript Declarations are Hoisted</h3>
+        In JavaScript, a variable can be declared after it has been used. <br><br>
+        In other words; a variable can be used before it has been declared.
+        <h4>Example</h4>
+        <p id="demo"></p>
+        <p id="demo1"></p>
+        <h3>JavaScript initializations is not a hoisted</h3>
+        JavaScript only hoists Declaration, not initialization
+        <h4>Example</h4>
+        <p id="demo2"></p>
+        <p id="demo3"></p>
+        <h3>Declare Your Variables At the Top !</h3>
+        If a developer doesn't understand hoisting, programs may contain bugs (errors). <br><br>
+        To avoid bugs, always declare all variables at the beginning of every scope. <br><br>
+        JavaScript in strict mode does not allow variables to be used if they are not declared.
+    </div>
+    <script>
+        x=5;//assign 5 to x;
+        elem=document.getElementById("demo");
+        elem.innerHTML=x;
+        var x;//declare a variable x
+        var y;//declare a vairable y
+        y=5;//assign 5 to y
+        elem1=document.getElementById("demo1");//find the element
+        elem1.innerHTML=y;//display y in the element
+        var a=10;//initialization of a
+        elem2=document.getElementById("demo2");
+        elem2.innerHTML=a+","+b;
+        var b=20;//initialization of b
+        var c;//declare a variable c
+        elem3=document.getElementById("demo3");
+        elem3.innerHTML="C="+c;
+        c=40;//initialization
+    </script>
+</body>
+</html>

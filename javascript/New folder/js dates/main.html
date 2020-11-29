@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js dates</title>
+</head>
+<body>
+    <div>
+        <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+    <p id="demo15"></p>
+    <p id="demo16"></p>
+    <p id="demo17"></p>
+    <p id="demo18"></p>
+    <p id="demo19"></p>
+    <p id="demo20"></p>
+    <p id="demo21"></p>
+    <p id="demo22"></p>
+    <p id="demo23"></p>
+    <p id="demo24"></p>
+    <p id="demo25"></p>
+    <p id="demo26"></p>
+    <p id="demo27"></p>
+    <p id="demo28"></p>
+    <p id="demo29"></p>
+    <p id="demo30"></p>
+    <p id="demo31"></p>
+    <p id="demo32"></p>
+    <p id="demo33"></p>
+    <p id="demo34"></p>
+    <p id="demo35"></p>
+    <p id="demo36"></p>
+    <p id="demo37"></p>
+    <p id="demo38"></p>
+    <p id="demo39"></p>
+    <p id="demo40"></p>
+    </div>
+    
+    <script>
+        var a=new Date;//creates a new date object with the current date and time
+        document.getElementById("demo1").innerHTML=a;
+        //JavaScript counts months from 0 to 11.
+        //January is 0. December is 11.
+        var b=new Date(2020,2,15,1,20,20,0);
+        document.getElementById("demo2").innerHTML=b;
+        var c=new Date(2020,2,15,1,20,20);
+        document.getElementById("demo3").innerHTML=c;
+        var d=new Date(2020,2,15,1,20);
+        document.getElementById("demo4").innerHTML=d;
+        var e=new Date(2020,2,15,1);
+        document.getElementById("demo5").innerHTML=e;
+        var f=new Date(2020,2,15);
+        document.getElementById("demo6").innerHTML=f;
+        var g=new Date(2020,2);
+        document.getElementById("demo7").innerHTML=g;
+        var h=new Date(2020);//You cannot omit month/year. If you supply only one parameter it will be treated as milliseconds.
+        document.getElementById("demo8").innerHTML=h;
+        var i=new Date(95,2,15);
+        document.getElementById("demo9").innerHTML=i;
+        var j=new Date(9,2,15);
+        document.getElementById("demo10").innerHTML=j;
+        var k=new Date("March 15, 1995 1:20:00");
+        document.getElementById("demo11").innerHTML=k;
+        var l=new Date(0);
+        document.getElementById("demo12").innerHTML=l;
+        var m=new Date(100000000000);
+        document.getElementById("demo13").innerHTML=m;
+        var n=new Date(-100000000000);
+        document.getElementById("demo14").innerHTML=n;
+        var o=new Date(86400000);//One day (24 hours) is 86 400 000 milliseconds.
+        document.getElementById("demo15").innerHTML=o;
+        var p=new Date(-86400000);
+        document.getElementById("demo16").innerHTML=p;
+        var q=new Date();
+        document.getElementById("demo17").innerHTML=q.toString();
+        var r=new Date();
+        document.getElementById("demo18").innerHTML=r.toUTCString();
+        var s=new Date();//The toDateString() method converts a date to a more readable format
+        document.getElementById("demo19").innerHTML=s.toDateString();
+    </script>
+</body>
+</html>

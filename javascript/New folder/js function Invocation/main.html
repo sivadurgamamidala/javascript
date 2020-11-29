@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js function invocation</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <h1>Function Invocation</h1>
+    Number1:10 <br>
+    Number2:2  <br>
+    multiplication of two numbers: <span id="demo"></span> <br>
+    Addition of two numbers : <span id="demo1"></span> <br>
+    Division of two numbers : <span id="demo2"></span> <br>
+    subtraction of two numbers : <span id="demo3"></span> <br><hr>
+
+    <h1>Invoking a function as a method</h1>
+    First Name: <span id="demo4"></span> <br>
+    Last Name: <span id="demo5"></span> <br>
+    full Name: <span id="demo6"></span><br><hr>
+
+    <h1>Invoking a function with function constructor</h1>
+    First Name: <span id="demo9"></span> <br>
+    Last Name: <span id="demo10"></span> <br><br><hr>
+
+    <script>
+        function myfunction(x,y){
+            return x * y;
+        }
+        document.getElementById("demo").innerHTML = myfunction(10,2)
+        function myfunction1(x,y){
+            return x + y;
+        }
+        document.getElementById("demo1").innerHTML = myfunction1(10,2)
+        function myfunction2(x,y){
+            return x / y;
+        }
+        document.getElementById("demo2").innerHTML = myfunction2(10,2)
+        function myfunction3(x,y){
+            return x - y;
+        }
+        document.getElementById("demo3").innerHTML = myfunction3(10,2)
+
+        var myobject = {
+            firstname:"sivadurga",
+            lastname:"mamidala",
+            fullname: function (){
+                return this.firstname+" "+this.lastname;
+            }
+        }
+        document.getElementById("demo4").innerHTML = myobject.firstname;
+        document.getElementById("demo5").innerHTML = myobject.lastname;
+        document.getElementById("demo6").innerHTML = myobject.fullname();
+
+        function myFunction5(x,y){
+            this.firstname = x;
+            this.lastname = y;
+        }
+        var y = new myFunction5("shivadurga","mamidala");
+        document.getElementById("demo9").innerHTML = y.firstname;
+        document.getElementById("demo10").innerHTML = y.lastname;
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js date set methods</title>
+</head>
+<body>
+   <p id="demo1"></p>
+   <p id="demo2"></p>
+   <p id="demo3"></p>
+   <p id="demo4"></p>
+   <p id="demo5"></p>
+   <p id="demo6"></p>
+   <p id="demo7"></p>
+   <p id="demo8"></p>
+   <p id="demo9"></p>
+   <p id="demo10"></p> 
+   <script>
+       var a=new Date();
+       a.setFullYear(1995);
+       document.getElementById("demo1").innerHTML=a;
+       var b=new Date();
+       b.setFullYear(1995,02,15);
+       document.getElementById("demo2").innerHTML=b;
+       var c=new Date();
+       c.setMonth(8);
+       document.getElementById("demo3").innerHTML=c;
+       var d=new Date();
+       d.setMinutes(20);
+       document.getElementById("demo4").innerHTML=d;
+       var e=new Date();
+       e.setSeconds(13);
+       document.getElementById("demo5").innerHTML=e;
+       var f=new Date();
+       f.setDate(10);
+       document.getElementById("demo6").innerHTML=f;
+       var g=new Date();
+       g.setDate((g.getDate()) + 10);
+       document.getElementById("demo7").innerHTML=g;
+       var h=new Date();
+       h.setHours(16);
+       document.getElementById("demo8").innerHTML=h;
+       var i=new Date();
+       i.setSeconds(40);
+       document.getElementById("demo9").innerHTML=i;
+       var today,info, someday;
+       today=new Date();
+       someday=new Date();
+       someday.setFullYear(1995,02,15);
+       if(today>someday){
+           info="today is after march 15 1995";
+       }
+       else{
+           info="today is before march 15 1995";
+       }
+       document.getElementById("demo10").innerHTML=info;
+   </script>
+</body>
+</html>

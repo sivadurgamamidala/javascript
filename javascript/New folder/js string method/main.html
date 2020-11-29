@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js string method</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="dem"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+    <p id="demo15"></p>
+    <p id="demo16"></p>
+    <p id="demo17"></p>
+    <p id="demo18"></p>
+    <p id="demo19">this is shivadurga shivadurga shivadurga shivadurga mamidala</p>
+    <p id="demo20"></p>
+    <p id="demo21"></p>
+    <p id="demo22">this is shivadurga shivadurga shivadurga shivadurga mamidala <button onclick="myfunction()">click here</button></p>
+    <p id="demo23">dsllsfjaskdfl</p>
+    <p>
+        The trim() method removes whitespace from both sides of a string:
+        <button onclick="myfunction1()">click here</button></p>
+    <p id="demo24"></p>
+    <p id="demo25"></p>
+    <p id="demo26"></p>
+    <p id="demo27"></p>
+    <p id="demo28"></p>
+
+    <script>
+        var a="abcdefghijklmnopqrstuvwxyz";
+        var b="this is shivadurga mamidala";
+        var c="this is shivadurga shivadurga shivadurga shivadurga mamidala";
+        var d=document.getElementById("demo19").innerHTML;
+        var e="shivadurga";
+        var f="mamidala";
+        var g=e.concat(" ",f);
+        var h=d.replace(/shivadurga/g,"siva");
+        var i="Shiva durga mamidala";
+        var j="                    shiva          durga                  ";
+        var k="Shiva durga";
+        var l="shiva,durga,teja";
+        var m=l.split(",");
+        document.getElementById("demo").innerHTML=a.length;
+        document.getElementById("dem").innerHTML=b.length;
+        document.getElementById("demo1").innerHTML=a.indexOf("z");
+        document.getElementById("demo2").innerHTML=b.indexOf("shiva");
+        document.getElementById("demo3").innerHTML=b.lastIndexOf("i");
+        document.getElementById("demo4").innerHTML=b.lastIndexOf("z");
+        document.getElementById("demo5").innerHTML=b.indexOf("i", 6);
+        document.getElementById("demo6").innerHTML=b.lastIndexOf("i",22);
+        document.getElementById("demo7").innerHTML=b.search("shiva");
+        document.getElementById("demo8").innerHTML=a.slice(4,8);
+        document.getElementById("demo9").innerHTML=b.slice(8,18);
+        document.getElementById("demo10").innerHTML=b.slice(-19,-9);
+        document.getElementById("demo11").innerHTML=b.slice(-19);
+        document.getElementById("demo12").innerHTML=b.substring(8,18);
+        document.getElementById("demo13").innerHTML=b.substr(8,19);
+        document.getElementById("demo14").innerHTML=b.substr(8);
+        document.getElementById("demo15").innerHTML=b.substr(-8);
+        document.getElementById("demo16").innerHTML=b.replace("shivadurga","sivadurga");
+        document.getElementById("demo17").innerHTML=b.replace(/shivadurga/i,"siva");
+        document.getElementById("demo18").innerHTML=c.replace(/shivadurga/g,"siva");
+        document.getElementById("demo19").innerHTML=h;
+        document.getElementById("demo20").innerHTML=c.toUpperCase();
+        document.getElementById("demo21").innerHTML=c.toUpperCase();
+        document.getElementById("demo23").innerHTML=g;
+        document.getElementById("demo24").innerHTML="j: "+j;
+        document.getElementById("demo25").innerHTML=i.charAt(0);
+        document.getElementById("demo26").innerHTML=i.charCodeAt(0);
+        document.getElementById("demo27").innerHTML=k[0];//ECMAScript 5 (2009) allows property access [ ] on strings.
+        document.getElementById("demo28").innerHTML=m[2];
+        function myfunction(){
+            var d=document.getElementById("demo19").innerHTML;
+            var e=d.replace(/shivadurga/g,"siva");
+            document.getElementById("demo22").innerHTML=e;
+        }
+        function myfunction1(){
+            var f="                    shiva          durga                  ";
+            alert(f.trim());
+        }
+    </script>
+</body>
+</html>

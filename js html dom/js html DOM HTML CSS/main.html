@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js DOM HTML CSS</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <p id="demo1">siva durga mamidala</p>
+    <p id="demo2">old text</p>
+    <img src="images/pic.png" id="demo" alt="profile pic">
+    <p id="demo3">shiva durga mamidala</p>
+    <p id="demo4">mamidala siva durga teja</p>
+    <button onclick="document.getElementById('demo4').style.color='dodgerblue'">click me</button>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <script>
+        document.write("Date: "+Date()+"<br>");
+        document.getElementById("demo1").innerHTML = "welcome shiva durga mamidala";
+        var element = document.getElementById("demo2");
+        element.innerHTML = "New text";
+        document.getElementById("demo").src = "images/pic1.jpg";
+        document.getElementById("demo3").style.color = "purple";
+        document.getElementById("demo3").style.textAlign = "center";
+        document.getElementById("demo3").style.fontSize = "24px";
+    </script>
+</body>
+</html>

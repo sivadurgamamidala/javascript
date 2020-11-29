@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js maths object</title>
+</head>
+<body>
+    <h3 style="text-align: center;">The JavaScript Math object allows you to perform mathematical tasks on numbers</h3>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+    <p id="demo15"></p>
+    <p id="demo16"></p>
+    <p id="demo17"></p>
+    <p id="demo18"></p>
+    <p id="demo19"></p>
+    <p id="demo20"></p>
+    <script>
+        var a= Math.PI;
+        document.getElementById("demo1").innerHTML=a;
+        document.getElementById("demo2").innerHTML=Math.round(a); 
+        var b=Math.pow(2,10);
+        document.getElementById("demo3").innerHTML=b;
+        var c=Math.sqrt(1024);
+        document.getElementById("demo4").innerHTML=c;
+        var d=-24.51;
+        document.getElementById("demo5").innerHTML=Math.abs(d);
+        var e=24.15;//Math.ceil(x) returns the value of x rounded up to its nearest integer
+        document.getElementById("demo6").innerHTML=Math.ceil(e);
+        var f=24.9;//Math.floor(x) returns the value of x rounded down to its nearest interger
+        document.getElementById("demo7").innerHTML=Math.floor(f);
+        //Angle in radians = Angle in degrees x PI / 180
+        document.getElementById("demo8").innerHTML=Math.sin(90 * Math.PI / 180);
+        document.getElementById("demo9").innerHTML=Math.cos(0 * Math.PI / 180);
+        document.getElementById("demo10").innerHTML=Math.ceil(Math.tan(45*Math.PI/180));
+        document.getElementById("demo11").innerHTML=Math.max(0,52,60,80,1,56,92,365,5224,714,46,5812,554,5);
+        document.getElementById("demo12").innerHTML=Math.min(-20,52,60,80,1,56,92,365,5224,714,46,5812,554,5);
+        document.getElementById("demo12").innerHTML=Math.random();
+    </script>
+</body>
+</html>

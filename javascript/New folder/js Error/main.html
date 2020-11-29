@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js Error</title>
+</head>
+<body>
+    <p id="demo1"><br></p>
+    <p id="demo2" style="float: left; margin-right: 5px;">Enter number between 5 to 10:</p>
+    <input id="demo3" style="margin-top: 15px;">
+    <button onclick="myfunction()">Click Here</button><br>
+    <p id="demo4"><br></p>
+    <p id="demo5" style="font-size: 30px; color: purple; text-align: center;">Error messages</p>
+    <button onclick="myfunction1()">Click Here range error</button><br>
+    <p id="demo6"><br></p>
+    <button onclick="myfunction2()">Click Here to see referance error</button><br>
+    <p id="demo7"><br></p>
+    <button onclick="myfunction3()">Click Here to see syntax error</button><br>
+    <p id="demo8"><br></p>
+    <button onclick="myfunction4()">Click Here to see type error</button><br>
+    <p id="demo9"><br></p>
+    <button onclick="myfunction5()">Click Here to see URIError</button><br>
+    <p id="demo10"><br></p>
+    <script>
+        try{
+            addlert("welcome man");
+        }
+        catch(err){
+            document.getElementById("demo1").innerHTML = err.message ;
+        }
+        function myfunction(){
+            var message,x;
+            message=document.getElementById("demo4");
+            message.innerHTML="";
+            x=document.getElementById("demo3").value;
+            try{
+                if(x=="") throw "empty";
+                if(isNaN(x)) throw "Not a Number";
+                x=Number(x);
+                if(x>10) throw "Too high";
+                if(x<5) throw "Too low";
+            }
+            catch(err){
+               alert(err);
+                document.getElementById("demo4").innerHTML="Input is "+ err;
+            }
+            finally{
+                document.getElementById("demo3").value="";
+            }
+        }
+        function myfunction1(){
+            var x=1;
+            try{
+                //A RangeError is thrown if you use a number that is outside the range of legal values.
+                //For example: You cannot set the number of significant digits of a number to 500.
+                x.toPrecision(500);
+            }
+            catch(err){
+                document.getElementById("demo6").innerHTML=err.name;
+            }
+        }
+        function myfunction2(){
+            var x=1;
+            try{
+                //A ReferenceError is thrown if you use (reference) a variable that has not been declared
+                // y is not declared
+                x=1+y;
+            }
+            catch(err){
+                document.getElementById("demo7").innerHTML=err.name;
+            }
+        }
+        function myfunction3(){
+            try{
+                //A SyntaxError is thrown if you try to evaluate code with a syntax error
+                eval("alert('hello)");
+            }
+            catch(err){
+                document.getElementById("demo8").innerHTML=err.name;
+            }
+        }
+        function myfunction4(){
+            var x=1;
+            try{
+                //A TypeError is thrown if you use a value that is outside the range of expected types
+                x.toUpperCase();
+            }
+            catch(err){
+                document.getElementById("demo9").innerHTML=err.name;
+            }
+        }
+        function myfunction5(){
+            try{
+                //A URIError is thrown if you use illegal characters in a URI function
+                decodeURI("%%%");   // You cannot URI decode percent signs
+            }
+            catch(err){
+                document.getElementById("demo10").innerHTML=err.name;
+            }
+        }
+    </script>
+</body>
+</html>

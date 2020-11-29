@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js conditions</title>
+</head>
+<body>
+    <div>
+        <span >Number1:</span><input id="num1" onchange="myfunction()" type="number" min="0"  ><br>
+    </div>
+    <div style="margin-top: 5px;">
+        <span >Number2:</span><input id="num2" onchange="myfunction()" type="number" min="0"  ><br>
+    </div>
+    <div style="margin-top: 5px;">
+        <span >Number3:</span><input id="num3" onchange="myfunction()" type="number" min="0" ><br>
+    </div>
+    <p id="demo1" style="color: red;"></p>
+    <script>
+        function myfunction(){
+            var num1=document.getElementById("num1").value;
+            var num2=document.getElementById("num2").value;
+            var num3=document.getElementById("num3").value;
+            if(num1>num2 && num1>num3){
+                document.getElementById("demo1").innerHTML="Number1 is larger than Number2 and Number3";
+            }
+            else if (num2>num1 && num2>num3) {
+                document.getElementById("demo1").innerHTML="Number2 is larger than Number1 and Number3";
+            } else {
+                document.getElementById("demo1").innerHTML="Number3 is larger than Number1 and Number2";
+            }
+        }
+    </script>
+</body>
+</html>

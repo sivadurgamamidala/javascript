@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js booleans</title>
+</head>
+<body>
+    <p id="demo1">*</p>
+    <p id="demo2">*</p>
+    <p id="demo3">*</p>
+    <p id="demo4">*</p>
+    <p id="demo5">*</p>
+    <p id="demo6">*</p>
+    <p id="demo7">*</p>
+    <p id="demo8">*</p>
+    <p id="demo9">*</p>
+    <p id="demo10">*</p>
+    <p id="demo11">*</p>
+    <p id="demo12">*</p>
+    <p id="demo13">*</p>
+    <p id="demo14">*</p>
+    <p id="demo15">*</p>
+    <p id="demo16">*</p>
+    <p id="demo17">*</p>
+
+    <script>
+        var a=10;
+        var b=20;
+        var c=Boolean(100);
+        document.getElementById("demo1").innerHTML=a<b;
+        document.getElementById("demo2").innerHTML=a>b;
+        document.getElementById("demo3").innerHTML=c;
+        document.getElementById("demo4").innerHTML=Boolean(3.14);
+        document.getElementById("demo5").innerHTML=Boolean(-20);
+        document.getElementById("demo6").innerHTML=Boolean("shiva");
+        document.getElementById("demo7").innerHTML=Boolean('false');
+        var d=0;//The Boolean value of -0 (minus zero) is false
+        document.getElementById("demo8").innerHTML=Boolean(d);
+        document.getElementById("demo9").innerHTML=Boolean(-d);
+        // The Boolean value of "" (empty string) is false
+        var e="";
+        document.getElementById("demo10").innerHTML=Boolean(e);
+        //The Boolean value of null is false
+        var f=null;
+        document.getElementById("demo11").innerHTML=Boolean(f);
+        //The Boolean value of false is (you guessed it) false
+        var g=false;
+        document.getElementById("demo12").innerHTML=Boolean(g);
+        //The Boolean value of NaN is false
+        var h=10/"shiva";
+        document.getElementById("demo13").innerHTML=Boolean(h);
+        var i=new Boolean(g);
+        document.getElementById("demo14").innerHTML=i;
+        //Do not create Boolean objects. It slows down execution speed.
+        //The new keyword complicates the code. This can produce some unexpected results
+        document.getElementById("demo15").innerHTML=(g==i);
+        document.getElementById("demo16").innerHTML=(g===i);
+        var j=new Boolean(g);
+        //(x == y) is false because objects cannot be compared
+        document.getElementById("demo17").innerHTML=(i==j);
+    </script>
+</body>
+</html>

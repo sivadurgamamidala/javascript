@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array iteration</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+    <p id="demo15"></p>
+    <script>
+        var txt ="";
+        var txt1="";
+        var numbers=[10,20,50,30,40,45,100];
+        var numbers1=[10,20,50,30,40,45,100];
+        numbers.forEach(myfunction);
+        document.getElementById("demo1").innerHTML=txt;
+        function myfunction(value, index, array){
+            txt= txt+value+" ";
+        }
+        numbers1.forEach(myfunction1);
+        document.getElementById("demo2").innerHTML=txt1;
+        function myfunction1(value){
+            txt1= txt1+value+" ";
+        }
+        var numbers2=numbers.map(myfunction2);
+        document.getElementById("demo3").innerHTML=numbers2;
+        function myfunction2(value,index, array){
+            return 2*value;
+        }
+        var over35=numbers1.filter(myfunction3);
+        document.getElementById("demo4").innerHTML=over35;
+        function myfunction3(value, index, array){
+            return value>35;
+        }
+        //The reduce() method runs a function on each array element to produce (reduce it to) a single value
+        var sum=numbers1.reduce(myfunction4);
+        document.getElementById("demo5").innerHTML=sum;
+        function myfunction4(total,value, index, array){
+            return total+value;
+        }
+        var sum1=numbers1.reduceRight(myfunction5);
+        document.getElementById("demo6").innerHTML=sum1;
+        function myfunction5(total,value, index, array){
+            return total+value;
+        }
+        var allover20=numbers1.every(myfunction6);
+        document.getElementById("demo7").innerHTML=allover20;
+        function myfunction6(value,index,array){
+            return value>20;//here min number is 10 so it is false
+        }
+        var allover5=numbers1.every(myfunction7);
+        document.getElementById("demo8").innerHTML=allover5;
+        function myfunction7(value,index,array){
+            return value>5;//here min number is 5 so it is true
+        }
+        var someover20=numbers1.some(myfunction8);
+        document.getElementById("demo9").innerHTML=someover20;
+        function myfunction8(value,index,array){
+            return value>20;
+        }
+        var fruits=["apple", "grapes", "orange","pineapple","apple"];
+        var x=fruits.indexOf("orange");
+        document.getElementById("demo10").innerHTML="orange is found at position: "+x;
+        var y=fruits.indexOf("apple");
+        document.getElementById("demo11").innerHTML="apple is found at position: "+y;
+        var a=fruits.indexOf("apple",1);
+        document.getElementById("demo12").innerHTML="apple is found at position: "+a;
+        var z=fruits.lastIndexOf("apple");
+        document.getElementById("demo13").innerHTML="apple is found at position: "+z;
+        var numbers123=[10,20,50,30,40,45,100];
+        var first=numbers123.findIndex(myfunction9);
+        document.getElementById("demo14").innerHTML="finding the first index more than 20 is "+first;
+        function myfunction9(value, index,array){
+            return value > 20;
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js Numbers</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+    <p id="demo15"></p>
+    <p id="demo16"></p>
+    <p id="demo17"></p>
+    <p id="demo18"></p>
+    <p id="demo19"></p>
+    <p id="demo20"></p>
+    <p id="demo21"></p>
+    <p id="demo22"></p>
+    <p id="demo23"></p>
+    <p id="demo24"></p>
+    <p id="demo25"></p>
+    <p id="demo26"></p>
+    <p id="demo27"></p>
+    <p id="demo28"></p>
+    <p id="demo29"></p>
+    <p id="demo30"></p>
+    <p id="demo31"></p>
+    <p id="demo32"></p>
+    <p id="demo33"></p>
+    <p id="demo34"></p>
+    <p id="demo35"></p>
+    <p id="demo36"></p>
+    <p id="demo37"></p>
+    <p id="demo38"></p>
+    <p id="demo39"></p>
+    <p id="demo40"></p>
+    <div>
+        <p id="demo41"></p>
+    </div>
+    <script>
+        var a=314;
+        var b=3.14;
+        var c=314e6;
+        var d=314e-6;
+        var e=9999999999999999999;
+        var f=99999999999999;
+        var g=3.14+3.56;
+        var h=(0.2*3.14+0.1*3.01)/10;
+        var i=a+b;
+        var j=10;//number
+        var k="20";//string
+        var l=j+k;//string
+        var m=k+j;//string
+        var n=k+a+b;
+        var o="10";
+        var p=k/o;
+        var q=k*o;
+        var r=k-o;
+        var s=k+o;
+        var t=a/"shiva";//number/string=NaN
+        var u=a/o;//if the string contains a numeric value , the result will be a number
+        var v=a/"shiva";//isNaN(x);  returns true because x is Not a Number
+        var w=NaN;
+        var x=w+a;//x will be NaN
+        var y=w+k;//y will be NaN20
+        var z=2;
+        var txt="";
+        var a1=314/0;
+        var b1=-314/0;
+        var c1=typeof(infinity);//typeof infinity
+        var d1= 0xaa;
+        var e1=44;
+        //e1.toString(10,32,16,8,2)
+        var f1=new Number(44);//e1==f1 true
+        //e1===f1 false
+        var g1=new Number(44);//f1==g1 false
+        //f1===g1 false
+        while(z!=Infinity){
+            z=z*z;
+            txt=txt+z+"<br>";
+            document.getElementById("demo41").innerHTML=txt;
+        }
+        document.getElementById("demo1").innerHTML=a;
+        document.getElementById("demo2").innerHTML=b;
+        document.getElementById("demo3").innerHTML=c;
+        document.getElementById("demo4").innerHTML=d;
+        document.getElementById("demo5").innerHTML=e;
+        document.getElementById("demo6").innerHTML=f;
+        document.getElementById("demo7").innerHTML=g;
+        document.getElementById("demo8").innerHTML=h;
+        document.getElementById("demo9").innerHTML=i;
+        document.getElementById("demo10").innerHTML=j;
+        document.getElementById("demo11").innerHTML=k;
+        document.getElementById("demo12").innerHTML=l;
+        document.getElementById("demo13").innerHTML=m;
+        document.getElementById("demo14").innerHTML=n;
+        document.getElementById("demo15").innerHTML=o;
+        document.getElementById("demo16").innerHTML=p;
+        document.getElementById("demo17").innerHTML=q;
+        document.getElementById("demo18").innerHTML=r;
+        document.getElementById("demo19").innerHTML=s;
+        document.getElementById("demo20").innerHTML=t;
+        document.getElementById("demo21").innerHTML=u;
+        document.getElementById("demo22").innerHTML=v;
+        document.getElementById("demo23").innerHTML=w;
+        document.getElementById("demo24").innerHTML=x;
+        document.getElementById("demo25").innerHTML=y;
+        document.getElementById("demo26").innerHTML=z;
+        document.getElementById("demo27").innerHTML=a1;
+        document.getElementById("demo28").innerHTML=b1;
+        document.getElementById("demo29").innerHTML=c1;
+        document.getElementById("demo30").innerHTML=d1;
+        document.getElementById("demo31").innerHTML=e1;
+        document.getElementById("demo32").innerHTML="E1=44 Decimal: "+e1.toString(10);
+        document.getElementById("demo33").innerHTML="E1=44 Hexadecimal :"+e1.toString(16);
+        document.getElementById("demo34").innerHTML="E1=44 Octal  :"+e1.toString(8);
+        document.getElementById("demo35").innerHTML="E1=44 Binary   :"+e1.toString(2);;
+        document.getElementById("demo36").innerHTML=typeof(e1)+" "+typeof(f1);
+        document.getElementById("demo37").innerHTML=(e1==f1);
+        document.getElementById("demo38").innerHTML=(e1===f1);
+        document.getElementById("demo37").innerHTML=(g1==f1);
+        document.getElementById("demo38").innerHTML=(g1===f1);
+    </script>
+</body>
+</html>

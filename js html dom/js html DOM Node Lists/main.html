@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript HTML DOM Collections</title>
+</head>
+<body>
+    <p>Hello world!</p>
+    <p>This is shiva</p>
+    <p>My aspect in my life to became a good quality developer</p><hr>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <button onclick="myfunction()">click me</button>
+    <script>
+        var myNodeList = document.querySelectorAll("p");
+        document.getElementById("demo").innerHTML = "the innerHtml of third paragraph is "+ myNodeList[2].innerHTML;
+        document.getElementById("demo1").innerHTML = "This document contains "+ myNodeList.length + " Paragraph";
+        var i;
+        var j = 0;
+        function myfunction(){
+            for(i=0;i<myNodeList.length;i++){
+                if(j==0){
+                    myNodeList[i].style.color="red";
+                    j++;
+                }else if(j==1){
+                    myNodeList[i].style.color="green";
+                    j++;
+                }else{
+                    myNodeList[i].style.color="purple";
+                    j=0;
+                }
+            }
+        }
+        
+    </script>
+</body>
+</html>

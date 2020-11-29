@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js strict mode</title>
+</head>
+<body>
+    <div>
+        <span><h1 style="color: red;">The "use strict" directive is only recognized at the beginning of a script or a function.</h1></span>
+        <h3>The "use strict" Directive</h3>
+        "use strict"; Defines that JavaScript code should be executed in "strict mode". <br><br>
+        The "use strict" directive was new in ECMAScript version 5. <br><br>
+        It is not a statement, but a literal expression, ignored by earlier versions of JavaScript. <br><br>
+        The purpose of "use strict" is to indicate that the code should be executed in "strict mode". <br><br>
+        With strict mode, you can not, for example, use undeclared variables. <br><br>
+        All modern browsers support "use strict" except Internet Explorer 9 and lower <br><br>
+        <span><b>NOTE:</b> 
+            <ol>
+                <li>
+                    You can use strict mode in all your programs. It helps you to write cleaner code, like preventing you from using undeclared variables.
+                </li>
+                <li>
+                    "use strict" is just a string, so IE 9 will not throw an error even if it does not understand it.
+                </li>
+            </ol>
+        </span>
+        <h3>Declaring Strict mode</h3>
+        Strict mode is declared by adding "use strict"; to the beginning of a script or a function. <br><br>
+        Declared at the beginning of a script, it has global scope (all code in the script will execute in strict mode) <br><br>
+        <h4>Example</h4>
+        <p id="demo">Here x is not declared so it shows an error and not displaying the x value</p>
+        <p id="demo1">Here y is not declared so it shows an error and not displaying the y value</p>
+        <h3>Why Strict Mode?</h3>
+        Strict mode makes it easier to write "secure" JavaScript. <br><br>
+        Strict mode changes previously accepted "bad syntax" into real errors. <br><br>
+        As an example, in normal JavaScript, mistyping a variable name creates a new global variable. In strict mode, this will throw an error, making it impossible to accidentally create a global variable. <br><br>
+        In normal JavaScript, a developer will not receive any error feedback assigning values to non-writable properties. <br><br>
+        In strict mode, any assignment to a non-writable property, a getter-only property, a non-existing property, a non-existing variable, or a non-existing object, will throw an error. <br><br>
+        <span><b>Important Note: </b>
+        <ol>
+            <li>Using a variable, without declaring it, is not allowed.</li>
+            <li>Using an object, without declaring it, is not allowed.</li>
+            <li>Deleting a variable (or object) is not allowed.</li>
+            <li>Deleting a function is not allowed.</li>
+            <li>Duplicating a parameter name is not allowed.</li>
+            <li>Octal numeric literals are not allowed.</li>
+            <li>Octal escape characters are not allowed.</li>
+            <li>Writing to a get-only property is not allowed.</li>
+            <li>Deleting an undeletable property is not allowed.</li>
+            <li>The word eval cannot be used as a variable.</li>
+            <li>The word arguments cannot be used as a variable.</li>
+            <li>The with statement is not allowed.</li>
+            <li>For security reasons, eval() is not allowed to create variables in the scope from which it was called.</li>
+            <li>The this keyword in functions behaves differently in strict mode 
+                <ol>
+                    <li>The this keyword refers to the object that called the function</li>
+                    <li>If the object is not specified, functions in strict mode will return undefined and functions in normal mode will return the global object (window)</li>
+                </ol>
+            </li>
+            <li>Keywords reserved for future JavaScript versions can NOT be used as variable names in strict mode. <br> <br>
+                They are: <br>
+                <ol>
+                    <li>implements</li>
+                    <li>interface</li>
+                    <li>let</li>
+                    <li>package</li>
+                    <li>private</li>
+                    <li>protected</li>
+                    <li>public</li>
+                    <li>static</li>
+                    <li>yield</li>
+                </ol>
+            </li>
+        </ol>
+        </span>
+    </div>
+    <script>
+        "use strict";
+        x=10;
+        document.getElementById("demo").innerHTML=x;//this will cause error because x is not declared.
+        myfunction();
+        function myfunction(){
+            "use strict";
+
+            y=20;
+            document.getElementById("demo1").innerHTML=y;
+        }
+    </script>
+</body>
+</html>

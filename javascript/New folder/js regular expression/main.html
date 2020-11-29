@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js regular expression</title>
+</head>
+<body>
+    <p id="demo1">User should be able to login after Registration.User should be able to search existing workspaces by location preference so that, system can recommend workspaces along with location on maps.</p>
+    <input type="text" id="demo" placeholder="enter string" >
+    <button onclick="myfunction()">click here to search the string</button><br>
+    <p id="demo2"><br></p>
+    <button onclick="myfunction1()" style="margin-top:10px;">click here to search the string="Registration"(case-insensitive)</button><br>
+    <p id="demo3"><br></p>
+    <p id="demo4">User should be able to login after Registration.User should be able to search existing workspaces by location preference so that, system can recommend workspaces along with location on maps.</p>
+    <input type="text" id="demo22" style="width: 300px;" placeholder="enter the text to replace instead of selected text">
+    <button onclick="myfunction2()">click here to replace selected string("User") in above paragraph</button>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+    <p id="demo15"></p>
+    <p id="demo16"></p>
+    <p id="demo17"></p>
+    <p id="demo18"></p>
+    <p id="demo19"></p>
+    <p id="demo20"></p>
+    <script>
+        function myfunction(){
+            var str=document.getElementById("demo1").innerHTML;
+            var m=document.getElementById("demo").value;
+            //The search() method searches a string for a specified value and returns the position of the match
+            var n=str.search(m);
+            document.getElementById("demo2").innerHTML=n;
+        }
+        function myfunction1(){
+            var str=document.getElementById("demo1").innerHTML;
+            var m=document.getElementById("demo").value;
+            //The search() method searches a string for a specified value and returns the position of the match
+            var n=str.search(/Registration/i);
+            document.getElementById("demo3").innerHTML=n;
+        }
+        
+        function myfunction2(){
+            var str=document.getElementById("demo4").innerHTML;
+            var n=document.getElementById("demo22").value;
+            //The search() method searches a string for a specified value and returns the position of the match
+            var o=str.replace(/User/g,n);
+            document.getElementById("demo4").innerHTML=o;
+        }
+        var a="shiva durga siva sai teja durga teja teja shiva 3165v 4651156489";
+        var n=/durga/i;
+        var m=a.match(n);
+        var o=/teja/g;
+        var p=a.match(o);
+        var q=/shiva/m;
+        var r=a.match(q);
+        var s=/[sakljfh]/g;
+        var t=a.match(s);
+        var u=/[65498]/g;
+        var v=a.match(u);
+        var w=/(shiva|teja)/g;
+        var x=a.match(w);
+        var y=/\d/g;
+        var z=a.match(y);
+        var aa=/\s/g;
+        var ab=a.match(aa);
+        var ac=/\bshiva/g;
+        var ad=a.match(ac);
+        var ae=/teja\b/g;
+        var af=a.match(ae);
+        var ag=/\u0057/g;
+        var ah=a.match(ag);
+        var ai=/shiva+/g;
+        var aj=a.match(ai);
+        var ak=/sh*/g;
+        var al=a.match(ak);
+        var am=/sh?/g;
+        var an=a.match(am);
+        document.getElementById("demo5").innerHTML=m;
+        document.getElementById("demo6").innerHTML=p;
+        document.getElementById("demo7").innerHTML=r;
+        document.getElementById("demo8").innerHTML=t;
+        document.getElementById("demo9").innerHTML=v;
+        document.getElementById("demo10").innerHTML=x;
+        document.getElementById("demo11").innerHTML=z;
+        document.getElementById("demo12").innerHTML=ab;
+        document.getElementById("demo13").innerHTML=ad;
+        document.getElementById("demo14").innerHTML=af;
+        document.getElementById("demo15").innerHTML=ah;
+        document.getElementById("demo16").innerHTML=aj;
+        document.getElementById("demo17").innerHTML=al;
+        document.getElementById("demo18").innerHTML=an;
+        document.getElementById("demo19").innerHTML=/shiva/.test(a);
+        var ao=/shiva/.exec("shiva durga siva sai teja durga teja teja shiva 3165v 4651156489");
+        document.getElementById("demo20").innerHTML="the name "+ao[0]+" is found at postion "+ao.index+ " in the text: "+ao.input; 
+    </script>
+</body>
+</html>

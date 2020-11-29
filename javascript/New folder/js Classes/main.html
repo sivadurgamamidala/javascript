@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js Classes</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <script>
+        //constructor method called each time when class is created
+        class name{
+            //constructor method automatically calls when object is created
+            constructor(lname){
+                this.lastname=lname;
+            }
+            fname(){
+                return "shivadurga "+this.lastname;
+            }
+            mname(x){
+                return x+" "+"this is shivadurga "+this.lastname;
+            }
+            static lname(){
+                return "hello sivadurga";
+            }
+            static lname1(y){
+                return "hello sivadurga "+y.lastname;
+            }
+        }
+        class details extends name{
+            constructor(lname,age){
+                //A constructor can use the super keyword to call the constructor of the super class.
+                super(lname);
+                this.Age=age;
+            }
+            show(){
+                return this.fname()+", Age: "+this.Age;
+            }
+        }
+        class employee{
+            constructor(name){
+                this.Ename=name;
+            }
+            get empname(){
+                return this.Ename;
+            }
+            set empname(x){
+                this.Ename=x;
+            }
+        }
+        class employee1{
+            constructor(name){
+                this._Ename=name;
+            }
+            get empname(){
+                return this._Ename;
+            }
+            set empname(x){
+                this._Ename=x;
+            }
+        }
+        class employee2{
+            constructor(name){
+                this._Ename=name;
+            }
+            get empname(){
+                return this._Ename;
+            }
+            set empname(x){
+                this._Ename=x;
+            }
+        }
+       // myemployee3=new employee3("vani kumari");//This would raise an error because You cannot use the class yet.
+        class employee3{
+            constructor(name){
+                //i=0; In "strict mode" you will get an error if you use a variable without declaring i
+                this._Ename=name;
+            }
+            get empname(){
+                return this._Ename;
+            }
+            set empname(x){
+                this._Ename=x;
+            }
+        }
+        myname=new name("mamidala");//here object is created
+        mydetails=new details("mamidala",25);
+        myemployee=new employee("shiva durga mamidala");
+        myemployee1=new employee1("shiva durga teja mamidala");
+        myemployee2=new employee2("shiva");
+        myemployee2.empname="durga";
+        myemployee3=new employee3("vani kumari");
+        document.getElementById("demo1").innerHTML=myname.lastname;
+        document.getElementById("demo2").innerHTML=myname.fname();
+        document.getElementById("demo3").innerHTML=myname.mname("Hello");
+        document.getElementById("demo4").innerHTML=name.lname();
+        document.getElementById("demo5").innerHTML=name.lname1(myname);
+        document.getElementById("demo6").innerHTML=mydetails.show();
+        document.getElementById("demo7").innerHTML=myemployee.empname;
+        document.getElementById("demo8").innerHTML=myemployee1.empname;
+        document.getElementById("demo9").innerHTML=myemployee2.empname;
+        document.getElementById("demo10").innerHTML=myemployee3.empname;
+        
+//Unlike functions, and other JavaScript declarations, class declarations are not hoisted.
+//That means that you must declare a class before you can use it
+//note:For other declarations, like functions, you will NOT get an error when you try to use it before it is declared, because the default behavior of JavaScript declarations are hoisting (moving the declaration to the top).
+//The body of a class is executed in strict mode, i.e., code written here is subject to stricter syntax for increased performance, some otherwise silent errors will be thrown, and certain keywords are reserved for future versions of ECMAScript.
+    </script>
+</body>
+</html>

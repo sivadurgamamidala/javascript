@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js loop while</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <script>
+        var i=0;
+        var j=0;
+        var x="";
+        var y="";
+        while(i<10){
+            x+="the number is "+i+"<br>";
+            i++;
+        }
+        document.getElementById("demo").innerHTML=x;
+        do{
+            y+="the number is "+j+"<br>";
+            j++;
+        }
+        while(j<10);
+        document.getElementById("demo1").innerHTML=y;
+        var a=["shiva","durga","teja"];
+        var b="";
+        var c=0;
+        while(a[c]){
+            b+=a[c]+"<br>";
+            c++;
+        }
+        var d=0;
+        var e="";
+        while(d<a.length){
+            e+=a[d]+"<br>";
+            d++;
+        }
+        document.getElementById("demo2").innerHTML=b;
+        document.getElementById("demo3").innerHTML=e;
+    </script>
+</body>
+</html>

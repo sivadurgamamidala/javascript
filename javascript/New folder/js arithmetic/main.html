@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js arithmetic / js assignment / js datatypes</title>
+</head>
+<body>
+    <p id="demo0">1</p>
+    <p id="demo1">2</p>
+    <p id="demo2">3</p>
+    <p id="demo3">4</p>
+    <p id="demo4">5</p>
+    <p id="demo5">5</p>
+    <p id="demo6">5</p>
+    <p id="demo7">5</p>
+    <p id="demo8">5</p>
+    <p id="demo9">5</p>
+    <p id="demo10" ></p>
+    <p id="demo11" ></p>
+    <p id="demo12" ></p>
+    <p id="demo13" ></p>
+    <p id="demo14" ></p>
+    <p id="demo15" ></p>
+    <script>
+        var x = 100;
+        var c=["shiva","durga","teja"]
+        var person={name:"shiva durga teja ",lastName:"mamidala", age:24, gender:"Male"}
+        z=++x;
+        y=x++;
+        a=x--;
+        b=--x;
+        m=10+10+"10"+1;
+        document.getElementById("demo0").innerHTML = x;
+        document.getElementById("demo1").innerHTML = y;
+        document.getElementById("demo2").innerHTML = z;
+        document.getElementById("demo3").innerHTML = a;
+        document.getElementById("demo4").innerHTML = b;
+        document.getElementById("demo5").innerHTML = m;
+        document.getElementById("demo6").innerHTML = c[0]+"<br>"+c[1]+" "+c[2];
+        document.getElementById("demo7").innerHTML = "Full Name: "+person.name+person.lastName;
+        document.getElementById("demo8").innerHTML = "Age: "+person.age;
+        document.getElementById("demo9").innerHTML="gender: "+person.gender;
+        document.getElementById("demo10").innerHTML= typeof x;
+        document.getElementById("demo11").innerHTML= typeof c[0];
+        document.getElementById("demo12").innerHTML= typeof person.name;
+        document.getElementById("demo13").innerHTML= typeof person.age;
+        document.getElementById("demo14").innerHTML= typeof z;
+
+
+    </script>
+</body>
+</html>

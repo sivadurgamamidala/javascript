@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Comparison and Logical Operators
+    </title>
+</head>
+<body>
+    <p id="demo1">1</p>
+    <p id="demo2">2</p>
+    <p id="demo3">3</p>
+    <p id="demo4">4</p>
+    <p id="demo5">5</p>
+    <p id="demo6">6</p>
+    <div>
+        <input type="number" id="age" value="18" min="1" max="120" onchange="myfunction()" style="float: left; margin-right: 10px;" >
+        <span id="demo7">you are eligible to vote</span><br>
+    </div><br>
+    <div>
+        <input  id="age1"  onchange="myfunction1()" style="float: left; margin-right: 10px;" >
+        <span id="demo8"></span><br>
+    </div>
+    
+    <script>
+        var a=5;
+        document.getElementById("demo1").innerHTML="a < 10 is "+(a<10);
+        document.getElementById("demo2").innerHTML="a > 10 is "+(a>10);
+        document.getElementById("demo3").innerHTML="a==5 is "+(a==5);
+        document.getElementById("demo4").innerHTML="a===5 is "+(a===5);
+        document.getElementById("demo5").innerHTML="a==='5' is "+(a==='5');
+        document.getElementById("demo6").innerHTML="a!=8 is "+(a!=8);
+        function myfunction(){
+            var age,votable;
+            age=document.getElementById("age").value;
+            votable =(age<18) ? "you are not eligible ":"you are eligible ";
+            document.getElementById("demo7").innerHTML=votable+"to vote";
+        }function myfunction1(){
+            var age,vatoble;
+            age=document.getElementById("age1").value;
+            if (isNaN(age)){
+                votable="input is not a number";
+            }
+            else{
+                votable=(age<18) ? "you are not eligible to vote":"you are eligible to vote";
+            }
+            document.getElementById("demo8").innerHTML=votable
+        }
+    </script>
+</body>
+</html>

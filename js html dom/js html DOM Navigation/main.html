@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript html DOM Navigation</title>
+</head>
+<body>
+    <h1 id="demo">Hello Shiva!</h1>
+    <p id="demo1"></p>
+    <div>
+        <p>the DOM is very useful!</p>
+        <p>this example demonstrates the <b>document.body</b> property</p>
+    </div>
+    <script>
+        // document.getElementById("demo1").innerHTML = document.getElementById("demo").innerHTML;
+        // document.getElementById("demo1").innerHTML = document.getElementById("demo").firstChild.nodeValue;
+        // document.getElementById("demo1").innerHTML = document.getElementById("demo").childNodes[0].nodeValue;
+        alert(document.body.innerHTML);// this will demonstrates the document body property
+        alert(document.documentElement.innerHTML);// this will demonstrates the document element property
+        // document.getElementById("demo1").innerHTML = document.getElementById("demo").nodeName; //The nodeName property specifies the name of a node.
+        document.getElementById("demo1").innerHTML = document.getElementById("demo").nodeType;
+    </script>
+</body>
+</html>

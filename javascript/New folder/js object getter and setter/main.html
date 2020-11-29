@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js objects</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <p id="demo1">*</p>
+    <p id="demo2">*</p>
+    <h3 id="aa">Data about employee</h3>
+    <p id="demo3">*</p>
+    <p id="demo4">*</p>
+    <p id="demo5">*</p>
+    <p id="demo6">*</p>
+    <p id="demo7">*</p>
+    <p id="demo8">*</p>
+    <p id="demo9">*</p>
+    <p id="demo10">*</p>
+    <script>
+        var person = {
+            firstName : "shiva durga teja",
+            lastName : "Mamidala",
+            language : "en",
+            get lang(){
+                return this.language;
+            }
+        };
+        var person1 = {
+            firstName : "shiva durga teja",
+            lastName : "Mamidala",
+            language : "",
+            set lang(value) {
+               this.language = value;
+            }
+        };
+        var person2 = {
+            firstName : "shiva durga teja",
+            lastName : "Mamidala",
+            language : "en",
+            get lang(){
+                return this.language.toUpperCase();
+            }
+        };
+        var person3 = {
+            firstName : "shiva durga teja",
+            lastName : "Mamidala",
+            language : "",
+            set lang(value) {
+               this.language = value.toUpperCase();
+            }
+        };
+        var obj = {counter : 0};
+        person1.lang = "telugu";
+        person3.lang = "telugu";
+        Object.defineProperty(obj,"reset",{
+            get : function(){
+                this.counter = 0;
+            }
+        });
+        Object.defineProperty(obj,"increment",{
+            get : function(){
+                this.counter++;
+            }
+        });
+        Object.defineProperty(obj,"decrement",{
+            get : function(){
+                this.counter--;
+            }
+        });
+        Object.defineProperty(obj,"add",{
+            set : function(value){
+                this.counter += value;
+            }
+        });
+        Object.defineProperty(obj,"sub",{
+            set : function(value){
+                this.counter -= value;
+            }
+        });
+        obj.reset;
+        obj.add=6;
+        obj.sub=1;
+        obj.increment;
+        obj.decrement;
+        document.getElementById("demo1").innerHTML=person.lang;
+        document.getElementById("demo2").innerHTML=person1.language;
+        document.getElementById("demo3").innerHTML="Employee1 Name: "+person.firstName+" "+person.lastName+"<br>"+"Language: "+person.lang;
+        document.getElementById("demo4").innerHTML="Employee2 Name: "+person1.firstName+" "+person1.lastName+"<br>"+"Language: "+person1.language;
+        document.getElementById("demo5").innerHTML="Employee3 Name: "+person2.firstName+" "+person2.lastName+"<br>"+"Language: "+person2.lang;
+        document.getElementById("demo6").innerHTML="Employee4 Name: "+person3.firstName+" "+person3.lastName+"<br>"+"Language: "+person3.language;
+        document.getElementById("demo7").innerHTML=obj.counter;
+    </script>
+</body>
+</html>

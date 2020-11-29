@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js date format</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+    <p id="demo15"></p>
+    <p id="demo16"></p>
+    <p id="demo17"></p>
+    <p id="demo18"></p>
+    <p id="demo19"></p>
+    <p id="demo20"></p>
+    <script>
+        var a=new Date("1995-03-15");
+        document.getElementById("demo1").innerHTML=a;
+        var b=new Date("1995-03");
+        document.getElementById("demo2").innerHTML=b;
+        var c=new Date("1995");
+        document.getElementById("demo3").innerHTML=c;
+        var d=new Date("1995-03-15T01:20:00Z");
+        document.getElementById("demo4").innerHTML=d;
+        var e=new Date("1995-03-15T01:20:00");
+        document.getElementById("demo5").innerHTML=e;
+        var f=new Date("03/15/1995");//Short dates are written with an "MM/DD/YYYY"
+        document.getElementById("demo6").innerHTML=f;
+        var g=new Date("1995/15/03");//1995/15/03 or 1995-15-03 ERROR: undefined or invalid date
+        document.getElementById("demo7").innerHTML=g;
+        var h=new Date("03/15/1995");
+        document.getElementById("demo8").innerHTML=h;
+        var i=new Date("March 15 1995");
+        document.getElementById("demo9").innerHTML=i;
+        var j=new Date("15 Mar 1995");
+        document.getElementById("demo10").innerHTML=j;
+        var k=new Date("Mar 15 1995");
+        document.getElementById("demo11").innerHTML=k;
+        var l=new Date("March,15,1995");
+        document.getElementById("demo12").innerHTML=l;
+        var m=Date.parse("march 15, 1995");
+        document.getElementById("demo13").innerHTML=m;
+        var n=new Date(m);
+        document.getElementById("demo14").innerHTML=n;
+    </script>
+
+
+</body>
+</html>

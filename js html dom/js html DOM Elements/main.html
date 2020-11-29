@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Elements</title>
+</head>
+<body>
+    <div id="main">
+        <p id="demo" class="siva">Hello Shiva</p>
+        <p class="siva1">Hello Shiva</p>
+        <p class="siva1">Hello Durga</p>
+        <p>This example demonstrating the getElementsById method</p>
+        <p id="demo1"></p>
+        <p>This example demonstrating the getElementsByTag method</p>
+        <p id="demo2"></p>
+        <p>finding the element with id="main", and then finds all elements inside "main"</p>
+        <p id="demo3"></p>
+        <p>This example demonstrating the getElementsByClass method</p>
+        <p id="demo4"></p>
+        <p>This example demonstrates the querySelectorAll method</p>
+        <p id="demo5"></p>
+        <p>Finding HTML Elements Using document.forms</p>
+        <form action="" id="elementsList">
+            <label for="mami">Fisrt Name: </label>
+            <input type="text" name="mami" value="shiva" >
+            <label for="mami1">Last Name: </label>
+            <input type="text" name="mami1" value="Durga" >
+            <input type="submit" value="submit" ">
+        </form><br>
+        <button onclick="function1()">Click here to display into list of elements</button>
+        <p id="demo6"></p>
+    </div>
+    <script>
+        var element = document.getElementById("demo");
+        document.getElementById("demo1").innerHTML = element.innerHTML + ", you are selected for this company";
+        var x = document.getElementsByTagName("p");
+        document.getElementById("demo2").innerHTML = x[0].innerHTML + ", you are Eligible for this drive";
+        var y = document.getElementById("main");
+        var z = y.getElementsByTagName("p");
+        document.getElementById("demo3").innerHTML = z[0].innerHTML + ", You are selected for this post and we will get back to you asap through phone/email.";
+        var a = document.getElementsByClassName("siva1");
+        document.getElementById("demo4").innerHTML = a[1].innerHTML + ", pls wait i will get back to You";
+        var b = document.querySelectorAll("p.siva1");
+        document.getElementById("demo5").innerHTML = b[1].innerHTML + ", I'm very happy to see You again";
+        function function1(){
+            x = document.getElementById("elementsList");
+            text = "";
+            var i;
+            for(i = 0; i < x.length; i++){
+                text += x.elements[i].value + "<br>";
+            }
+            document.getElementById("demo6").innerHTML = text;
+        }
+    </script>
+</body>
+</html>

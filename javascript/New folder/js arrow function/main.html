@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js arrow function</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <button id="btn"> click here</button>
+    <p id="demo3"></p>
+    <button id="btn1"> click here</button>
+    <p id="demo4"></p>
+    <script>
+        var hello = () => {return "Hello"};
+        document.getElementById("demo").innerHTML=hello();
+        var hello1 = (val) => {return "Mr."+val};
+        document.getElementById("demo1").innerHTML=hello1("Shiva");
+        //without parathesis we can call value
+        var hello2 = val =>{ return "This is your birthday date:"+" "+val};
+        document.getElementById("demo2").innerHTML=hello2(new Date("1995-03-15"));
+        //With a regular function this represents the object that calls the function
+        var hello3;
+        hello3 = function() {
+            document.getElementById("demo3").innerHTML += this;
+        }
+        //The window object calls the function:
+        window.addEventListener("load", hello3);
+        //A button object calls the function:
+        document.getElementById("btn").addEventListener("click", hello3);
+        var hello4;
+        hello4 = () => {
+            document.getElementById("demo4").innerHTML += this;
+        }
+        //The window object calls the function:
+        window.addEventListener("load", hello4);
+        //A button object calls the function:
+        document.getElementById("btn1").addEventListener("click", hello4);
+        var bunny = {
+            name: 'Usagi',
+            tasks: ['transform', 'eat cake', 'blow kisses'],
+            showTasks() {
+                this.tasks.forEach((task) => {
+                    document.write(this.name + " wants to " + task+"<br>");
+                });  
+            }
+        };
+        bunny.showTasks();
+        // var x=10;
+        // var y=20;
+        // var z=
+        // x+y;//if you change to a new line when not within a string statement, then javaScript ignores break in line.
+        // document.write(z);
+    </script>
+</body>
+</html>

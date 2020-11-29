@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js let keyword</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <script>
+        var a=10;// a value is 10
+        {
+            var a=5;
+            document.getElementById("demo1").innerHTML=a;//a value is 5
+        }
+        document.getElementById("demo2").innerHTML=a;//a value is 5
+        var b=5;//b value is 5
+        for(var b=6; b<20; b++){
+            document.getElementById("demo3").innerHTML=b;//b value is 19
+        }//after the loop b value is 20
+        document.getElementById("demo4").innerHTML=b;//b value is 20
+        let c= 10;//c value is 10
+        {
+            let c=20;//c value is 20
+            document.getElementById("demo5").innerHTML=c;//c value is c=20
+        }
+        document.getElementById("demo6").innerHTML=c;//c value is 10
+        let d=20;
+        for(let d=0;d<=5;d++){
+            document.getElementById("demo7").innerHTML=d;
+        }
+        document.getElementById("demo8").innerHTML=d;
+        e=20;
+        document.getElementById("demo9").innerHTML=e;
+        let e;
+    </script>
+</body>
+</html>

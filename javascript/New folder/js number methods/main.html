@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js number methods</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4.1"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+    <p id="demo15"></p>
+    <p id="demo16"></p>
+    <p id="demo17"></p>
+    <p id="demo18"></p>
+    <p id="demo19"></p>
+    <p id="demo20"></p>
+    <p id="demo21"></p>
+    <p id="demo22"></p>
+    <p id="demo23"></p>
+    <p id="demo24"></p>
+    <p id="demo25"></p>
+    <p id="demo26"></p>
+    <p id="demo27"></p>
+    <p id="demo28"></p>
+    <p id="demo29"></p>
+    <p id="demo30"></p>
+    <p id="demo31"></p>
+    <p id="demo32"></p>
+    <p id="demo33"></p>
+    <p id="demo34"></p>
+    <p id="demo35"></p>
+    <p id="demo36"></p>
+    <p id="demo37"></p>
+    <p id="demo38"></p>
+    <p id="demo39"></p>
+    <p id="demo40"></p>
+    <p id="demo41"></p>
+    <p id="demo42"></p>
+    <p id="demo43"></p>
+    <p id="demo44"></p>
+    <p id="demo45"></p>
+    <p id="demo46"></p>
+    <p id="demo47"></p>
+    <p id="demo48"></p>
+    <p id="demo49"></p>
+    <p id="demo50"></p>
+    <script>
+        var x=123;
+        var y=123.57848;
+        //The toString() Method
+        // toString() Method returns the number as string
+        // All number methods can be used on any type of numbers (literals, variables, or expressions)
+        document.getElementById("demo1").innerHTML=x.toString();// return 123 from variable
+        document.getElementById("demo2").innerHTML=(123).toString();//return 123 from literal
+        document.getElementById("demo3").innerHTML=(100+23).toString();//return 123 from expression
+        //The toExponential() Method
+        // toExponential() returns a string, with a number rounded and written using exponential notation.
+        document.getElementById("demo4.1").innerHTML=y;
+        document.getElementById("demo4").innerHTML=y.toExponential();
+        document.getElementById("demo5").innerHTML=y.toExponential(2);
+        document.getElementById("demo6").innerHTML=y.toExponential(4);
+        document.getElementById("demo7").innerHTML=y.toExponential(6);
+        document.getElementById("demo8").innerHTML=y.toExponential(8);
+        // The toFixed() Method
+        // toFixed(2) is perfect for working with money.
+        document.getElementById("demo9").innerHTML=y.toFixed(0);
+        document.getElementById("demo10").innerHTML=y.toFixed(1);
+        document.getElementById("demo11").innerHTML=y.toFixed(2);
+        document.getElementById("demo12").innerHTML=y.toFixed(3);
+        document.getElementById("demo13").innerHTML=y.toFixed(4);
+        // The toPrecision() Method
+        //toPrecision() Method : return string, with an number written with a specific length
+        document.getElementById("demo14").innerHTML=y.toPrecision();
+        document.getElementById("demo15").innerHTML=y.toPrecision(3);
+        document.getElementById("demo16").innerHTML=y.toPrecision(5);
+        document.getElementById("demo17").innerHTML=y.toPrecision(7);
+        //The valueOf() Method
+        //The valueOf() Method returns the number as number
+        document.getElementById("demo18").innerHTML=x.valueOf() ;// return 123 from variable
+        document.getElementById("demo19").innerHTML=(123).valueOf();//return 123 from literal
+        document.getElementById("demo20").innerHTML=(100+23).valueOf();//return 123 from expression
+        // The Number() Method
+        // Number() can be used to convert JavaScript variables to numbers
+        document.getElementById("demo21").innerHTML=Number(true);
+        document.getElementById("demo22").innerHTML=Number(false);
+        document.getElementById("demo23").innerHTML=Number("10");
+        document.getElementById("demo24").innerHTML=Number("     10");
+        document.getElementById("demo25").innerHTML=Number("10     ");
+        document.getElementById("demo26").innerHTML=Number("10.33");
+        document.getElementById("demo27").innerHTML=Number("10,33");
+        document.getElementById("demo28").innerHTML=Number("10 33");
+        document.getElementById("demo29").innerHTML=Number("shiva");
+        document.getElementById("demo30").innerHTML=Number(new Date("2020-04-29"));
+        //The parseInt() Method
+        //parseInt() parses a string and returns a whole number. Spaces are allowed. Only the first number is returned
+        document.getElementById("demo31").innerHTML=parseInt("10");
+        document.getElementById("demo32").innerHTML=parseInt("10.33");
+        document.getElementById("demo33").innerHTML=parseInt("10 20 30");
+        document.getElementById("demo34").innerHTML=parseInt("10 shiva");
+        document.getElementById("demo35").innerHTML=parseInt("shiva 10");
+        // The parseFloat() Method
+        //parseFloat() parses a string and returns a number. Spaces are allowed. Only the first number is returned
+        document.getElementById("demo36").innerHTML=parseFloat("10");
+        document.getElementById("demo37").innerHTML=parseFloat("10.33");
+        document.getElementById("demo38").innerHTML=parseFloat("10 20 30");
+        document.getElementById("demo39").innerHTML=parseFloat("10 shiva");
+        document.getElementById("demo40").innerHTML=parseFloat("shiva 10");
+        // MAX_VALUE	Returns the largest number possible in JavaScript
+        var a=Number.MAX_VALUE;
+        document.getElementById("demo41").innerHTML=a;
+        // MIN_VALUE	Returns the smallest number possible in JavaScript
+        var b=Number.MIN_VALUE;
+        document.getElementById("demo42").innerHTML=b;
+        // POSITIVE_INFINITY	Represents infinity (returned on overflow)
+        var c = Number.POSITIVE_INFINITY;//any postive number divided by zero
+        document.getElementById("demo43").innerHTML = c;
+        // NEGATIVE_INFINITY	Represents negative infinity (returned on overflow)
+        var d=Number.NEGATIVE_INFINITY;//any negative number divided by zero
+        document.getElementById("demo44").innerHTML=d;
+        // NaN	Represents a "Not-a-Number" value
+        //var x = 100 / "Apple";  // x will be NaN (Not a Number)
+        var e=Number.NaN;
+        document.getElementById("demo45").innerHTML=e;
+        //Number Properties Cannot be Used on Variables
+        var f=41;
+        var g=f.Number;
+        document.getElementById("demo46").innerHTML=g;
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript function apply</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <h1>the javascript apply() method</h1>
+    <ul>
+           <li>apply() method is similar to call() method</li>
+    </ul>
+    
+    Name: <span id="demo"></span><hr>
+
+    <h1>The apply() method with arguments</h1>
+    Name: <span id="demo1"></span><br><hr>
+
+    <h1>Simulate a Max Method on Arrays</h1>
+    <span id="demo2"></span><br>
+    <span id="demo3"></span><br>
+    <span id="demo4"></span><br>
+    <span id="demo5"></span><br>
+    <span id="demo6"></span><br>
+    <script>
+        var myobj = {
+            fullname : function(){
+                return this.firstname + " " + this.lastname;
+            }
+        }
+        var person = {
+            firstname :"Shiva Durga",
+            lastname : "Mamidala"
+        }
+        document.getElementById("demo").innerHTML = myobj.fullname.apply(person);
+
+        var myobj1 = {
+            fullname : function(city,state,country){
+                return this.firstName + " " + this.lastName + "<br>" + "City Name :" + city +"<br>" + "State Name: "+ state +"<br>" + "Country Name: "+ country;
+            }
+        }
+        var person1 = {
+            firstName :"Vani kumari",
+            lastName : "Mamidala"
+        }
+        document.getElementById("demo1").innerHTML = myobj1.fullname.apply(person1,["Guntur","Andhra Pradesh", "India"]);
+
+        document.getElementById("demo2").innerHTML = Math.max(1,2,3);
+        document.getElementById("demo3").innerHTML = Math.max.apply(null,[1,2,3]);
+        document.getElementById("demo4").innerHTML = Math.max.apply(0,[1,2,3]);
+        document.getElementById("demo5").innerHTML = Math.max.apply(Math,[1,2,3]);
+        document.getElementById("demo6").innerHTML = Math.max.apply(" ",[1,2,3]);
+    </script>
+</body>
+</html>

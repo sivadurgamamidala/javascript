@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js For loop</title>
+</head>
+<body>
+    <!-- loop can execute block of code a number of times -->
+    <p id="demo1">*</p>
+    <p id="demo2">*</p>
+    <p id="demo3">*</p>
+    <p id="demo4">*</p>
+    <p id="demo5">*</p>
+    <p id="demo6">*</p>
+    <p id="demo7">*</p>
+    <p id="demo8">*</p>
+    <p id="demo9">*</p>
+    <p id="demo10">*</p>
+    <script>
+        var text="";
+        var cars="";
+        for(var i=0; i<10; i++){
+            text+="number is "+i+"<br>";
+        }
+        document.getElementById("demo1").innerHTML=text;
+        var car=["BMW","posch","suziki shift","tata indigo","tata indika", "Benz", "innova","fortuner","Audi"];
+        for(var i=0; i<car.length;i++){
+            cars+=car[i]+"<br>";
+        }
+        var car1=["BMW","posch","suziki shift","tata indigo","tata indika", "Benz", "innova","fortuner","Audi"];
+        var car11="";
+        for(car11 of car1){
+           // document.write(car11+"<br>");
+           document.write(car11+"<br>");
+        }
+        document.getElementById("demo2").style.fontSize="xx-large";
+        document.getElementById("demo2").style.color="purple";
+        document.getElementById("demo2").innerHTML="Cars Model names";
+        document.getElementById("demo3").innerHTML=cars;
+        var fullname = "";
+        var name1 = {fname:"shiva", lname:"mamidala"};
+        var x;
+        for (x in name1) {
+            fullname += name1[x] + " ";
+        }
+        console.log(fullname);
+        document.getElementById("demo5").innerHTML = fullname;
+        var siva="shiva durga teja mamidala";
+        var c;
+        for(c of siva){
+            document.write(c+"<br>");
+        }
+    </script>
+</body>
+</html>

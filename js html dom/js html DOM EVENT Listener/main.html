@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js html dom Event Listener</title>
+    <link rel="stylesheet" href="main.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <!-- jQuery and JS bundle w/ Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" ></script>
+</head>
+<body>
+    <button id="mybtn" class="btn btn-outline-primary">Try Me</button>
+    <input type="text" maxlength="20" id="demo0" onchange="myfunction1()"><br>
+    <button class="btn btn-outline-primary" id="mybtn1">click here to know my phone number</button>
+    <button class="btn btn-outline-warning" id="mybtn2">click here to get results</button>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+   <script>
+       var x=document.getElementById("demo0");
+       var y=document.getElementById("mybtn");
+       var a1 = 5;
+       var a2 = 6;
+       y.addEventListener("click",myfunction);
+       y.addEventListener("click", function myfunction2(){alert("Hello Shiva durga mamidala")});
+       document.getElementById("mybtn1").addEventListener("click",function myfunction(){alert("hi, 8288959015 is my phone number!")})
+       function myfunction(){
+            document.getElementById("demo").innerHTML = Date();
+       }
+       function myfunction1(){
+           x.style.textTransform = "uppercase";
+       }
+       window.addEventListener("resize", () => {
+           document.getElementById("demo3").innerHTML = Math.random();
+       });
+       document.getElementById("mybtn2").addEventListener("click",function myfun(a1,a2){
+           var result = a1 * a2;
+           document.getElementById("demo5").innerHTML = result;
+       });
+   </script> 
+</body>
+</html>

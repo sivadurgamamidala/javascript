@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js scope</title>
+</head>
+<body>
+    <div>
+        <div>In java script has two types of scopes:
+            <li>local scope</li>
+            <li>globle scope</li>
+            <br>
+            JavaScript has function scope: Each function creates a new scope.<br><br>
+            Scope determines the accessibility (visibility) of these variables. <br><br>
+            Variables defined inside a function are not accessible (visible) from outside the function. <br><br>
+            <h3>Local JavaScript Variables</h3>
+            variable declared with in the function, become LOCAL to function <br><br>
+            Local variables have Function scope: They can only be accessed from within the function <br><br>
+            Since local variables are only recognized inside their functions, variables with the same name can be used in different functions. <br><br>
+            Local variables are created when a function starts, and deleted when the function is completed. <br><br>
+            <b>Example:</b>
+            <p id="demo"></p>
+            <p id="demo1"></p>
+            <h3>Global JavaScript variables</h3>
+            A variable declared outside a function, becomes GLOBAL. <br><br>
+            A global variable has global scope: All scripts and functions on a web page can access it. <br><br>
+            <b>Example</b>
+            <p id="demo2"></p>
+            <p id="demo3"></p>
+            <h3>Automatically Global</h3>
+            If you assign a value to a variable that has not been declared, it will automatically become a GLOBAL variable. <br><br>
+            This code example will declare a global variable z, even if the value is assigned inside a function.
+            <b>Example</b>
+            <p id="demo4"></p>
+            <p id="demo5"></p>
+            <h3>Global Variables in HTML</h3>
+            With JavaScript, the global scope is the complete JavaScript environment. <br><br>
+            In HTML, the global scope is the window object. All global variables belong to the window object. <br><br>
+            <b>Example</b>
+            <p id="demo6"></p>
+            <h2 style="color: purple; text-align: center; font-weight: bold;" >The Lifetime of JavaScript Variables</h2>
+            <ol>
+                <li>The lifetime of a JavaScript variable starts when it is declared.</li><br>
+                <li>Local variables are deleted when the function is completed.</li><br>
+                <li>In a web browser, global variables are deleted when you close the browser window (or tab).</li><br>
+            </ol>
+        </div>
+    </div>
+    <script>
+        var y="mamidala";
+        //All scripts and functions on a web page can access global variable.
+        myfunction();
+        function myfunction(){
+            var x="shiva";//local js variable 
+            z="shivadurgamamidala";//if we not assign to a variable, that will automatical become global variable
+            //local variable can only assess with in the function
+            document.getElementById("demo").innerHTML=typeof x+" "+x;
+            document.getElementById("demo2").innerHTML=typeof y+" "+y;
+            document.getElementById("demo4").innerHTML=typeof z+" "+z;
+        }
+        //Local variables are created when a function starts, and deleted when the function is completed. so typeof x is undefined
+        document.getElementById("demo1").innerHTML=typeof x;
+        document.getElementById("demo3").innerHTML=typeof y;
+        document.getElementById("demo5").innerHTML=typeof z;
+        document.getElementById("demo6").innerHTML=window.y;
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js type conversion</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+    <p id="demo15"></p>
+    <p id="demo16"></p>
+    <p id="demo17"></p>
+    <p id="demo18"></p>
+    <p id="demo19"></p>
+    <p id="demo20"></p>
+    <p style="font-size: 30px; text-align: center;">java script type conversion</p>
+    <p id="demo21"></p>
+    <p id="demo22"></p>
+    <p id="demo23"></p>
+    <p id="demo24"></p>
+    <p id="demo25"></p>
+    <p id="demo26"></p>
+    <p id="demo27"></p>
+    <p id="demo28"></p>
+    <p id="demo29"></p>
+    <p id="demo30"></p>
+    <p id="demo31"></p>
+    <p id="demo32"></p>
+    <p id="demo33"></p>
+    <p id="demo34"></p>
+    <p id="demo35"></p>
+    <p id="demo36"></p>
+    <p id="demo37"></p>
+    <p id="demo38"></p>
+    <p id="demo39"></p>
+    <p id="demo40"></p>
+<script>
+    var a="shiva";
+    var b=10;
+    var c=NaN;
+    var d=false;
+    var e=["shiva","durga",40];
+    var f={name:"shiva",Age:24};
+    var g=new Date();
+    var h=function (){};
+    var i;
+    var j=null;
+    var k=["shiva","durga",40];
+document.getElementById("demo1").innerHTML = typeof a;
+document.getElementById("demo2").innerHTML = typeof b;
+document.getElementById("demo3").innerHTML = typeof c;
+document.getElementById("demo4").innerHTML = typeof d;
+document.getElementById("demo5").innerHTML = typeof e;
+document.getElementById("demo6").innerHTML = typeof f;
+document.getElementById("demo7").innerHTML = typeof g;
+document.getElementById("demo8").innerHTML = typeof h;
+document.getElementById("demo9").innerHTML = typeof i;
+document.getElementById("demo10").innerHTML = typeof j;
+document.getElementById("demo11").innerHTML=a.constructor;
+document.getElementById("demo12").innerHTML =  b.constructor;
+document.getElementById("demo13").innerHTML = c.constructor;
+document.getElementById("demo14").innerHTML = d.constructor;
+document.getElementById("demo15").innerHTML = e.constructor;
+document.getElementById("demo16").innerHTML =f.constructor;
+document.getElementById("demo17").innerHTML = g.constructor;
+document.getElementById("demo18").innerHTML = h.constructor;
+document.getElementById("demo19").innerHTML = isArray(e);
+function isArray(array){
+    return array.constructor.toString().indexOf("Array")>-1
+}
+document.getElementById("demo20").innerHTML = isArray1(k);
+function isArray1(array){
+    return array.constructor===Array;
+}
+// The global method String() can convert numbers to strings.
+// It can be used on any type of numbers, literals, variables, or expressions
+var x=108;
+document.getElementById("demo21").innerHTML = String(x);//returns a string from a number variable x
+document.getElementById("demo22").innerHTML=String(108);//return a string from a number literal 108
+document.getElementById("demo23").innerHTML=String(100+8);//return a string from an expression
+//the number method tostring() does the same
+document.getElementById("demo24").innerHTML=x.toString();
+document.getElementById("demo25").innerHTML=(108).toString();
+document.getElementById("demo26").innerHTML=(100+8).toString();
+var l="10";
+var m=+l;
+document.getElementById("demo27").innerHTML=typeof l+"<br>"+typeof m;
+var n="shiva";//return string
+var o=+n;//return NaN(not a number)
+document.getElementById("demo28").innerHTML=typeof n+"<br>"+typeof o;
+document.getElementById("demo29").innerHTML=Number(true)+"<br>"+Number(false);
+var p=new Date();
+document.getElementById("demo30").innerHTML=Number(p);
+document.getElementById("demo31").innerHTML=p.getTime();
+document.getElementById("demo32").innerHTML=108+null;//here null convert into null=0;
+document.getElementById("demo33").innerHTML="108"+null;//here null convert into string null;
+document.getElementById("demo34").innerHTML="108"+2;//here 2 is converted into string 2; (here + means concatination)
+document.getElementById("demo35").innerHTML="108"-2;//here 2 is converted into number 2 and perform subtraction
+document.getElementById("demo36").innerHTML="108"*2;//here 2 is converted into number 2 and perform multiplication
+document.getElementById("demo37").innerHTML="108"/2;//here 2 is converted into number 2 and perform division
+
+
+
+
+</script>
+</body>
+</html>

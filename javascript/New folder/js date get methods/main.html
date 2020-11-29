@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js get date methods</title>
+</head>
+<body>
+    <h3 style="text-align: center;">These methods can be used for getting information from a date object</h3>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+    <p id="demo15"></p>
+    <p id="demo16"></p>
+    <p id="demo17"></p>
+    <p id="demo18"></p>
+    <p id="demo19"></p>
+    <p id="demo20"></p>
+    <script>
+        var a=new Date();
+        document.getElementById("demo1").innerHTML=a;
+        document.getElementById("demo2").innerHTML=a.getTime();
+        document.getElementById("demo3").innerHTML=a.getDate();
+        document.getElementById("demo4").innerHTML=a.getMonth();
+        document.getElementById("demo5").innerHTML=a.getFullYear();
+        document.getElementById("demo6").innerHTML=a.getDay();
+        document.getElementById("demo7").innerHTML=a.getHours();
+        document.getElementById("demo8").innerHTML=a.getMinutes();
+        document.getElementById("demo9").innerHTML=a.getSeconds();
+        document.getElementById("demo10").innerHTML=a.getMilliseconds();
+        document.getElementById("demo11").innerHTML=a.getDay();
+        var days=["sunday","monday","tuesday","wednesday","thursday","friday","saturday"];
+        document.getElementById("demo12").innerHTML=days[a.getDay()];
+        var months=["january","febuary","march","april","may","june","july","august","september","october","november","december"];
+        document.getElementById("demo12").innerHTML=months[a.getMonth()];
+    </script>
+</body>
+</html>

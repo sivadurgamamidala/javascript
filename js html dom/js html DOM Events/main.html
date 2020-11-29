@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js html DOM Events</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body onload="checkCookies()">
+    <h1 onclick="this.innerHTML='shiva durga mamidala'">click on this text!</h1>
+    <h1 onclick="changeText(this)">click on this text!</h1>
+    <button onclick="displayDate()">display Date</button>
+    <button id="myBtn">display Date1</button>
+    <input type="text" id="fname" onchange="upperCase()"><br>
+    <p id="trigger2" onmouseover="mouseOver()" onmouseout="mouseOut()">M.Siva Durga Teja</p>
+    <script>
+        function changeText(id){
+            id.innerHTML="oops! you find me, this is siva durga teja mamidala!"
+        }
+        function displayDate(){
+            document.getElementById("demo").innerHTML = Date();
+        }
+        function displayDate1(){
+            document.getElementById("demo1").innerHTML = Date();
+        }
+        document.getElementById("myBtn").onclick = displayDate1;
+        function checkCookies(){
+            var text = "";
+            if (navigator.cookieEnabled == true){
+                text = "Cookies are enabled";
+            }
+            else{
+                text = "Cookies are not enabled";
+            }
+            document.getElementById("demo2").innerHTML = text;
+        }
+        function upperCase(){
+            document.getElementById("fname").style.textTransform="uppercase";
+        }
+        function mouseOver(){
+            document.getElementById("trigger2").innerHTML = "Thank You";
+        }
+        function mouseOut(){
+            document.getElementById("trigger2").innerHTML = "M.Siva Durga Teja";
+        }
+    </script>
+     <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+</body>
+</html>

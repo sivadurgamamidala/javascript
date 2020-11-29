@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript function</title>
+    <script src="main.js"></script>
+</head>
+<body>
+    <p>below function perform calculation</p>
+    Enter Number1: <input type="number" id="num1" ><br><br>
+    Enter Number2: <input type="number" id="num2" ><br><br>
+    <button onclick="myFunction()">calculate</button> <br><br>
+    Result : <span id="demo"></span>
+    <hr>
+
+    Enter Number1: <input type="number" disabled value="4" ><br><br>
+    Enter Number2: <input type="number" disabled value="3"><br><br>
+    <button onclick="myFunction1()" disabled>calculate</button> <br><br>
+    Result : <span id="demo1"></span>
+    <hr>
+
+    <p>Multiplication: Number1 and Number2</p>
+    <p id="demo3"></p>
+    Number1 : 15 <br><br>
+    Number2 : 3  <br><br>
+    Result : <span id="demo2"></span>
+    <hr>
+
+    <p>The Function Constructor</p>
+    Number1 : 5 <br><br>
+    Number2 : 5  <br><br>
+    Result : <span id="demo4"></span>
+    <hr>
+
+    <p>The Function Hoisting</p>
+    Number : 5 <br><br>
+    Result : <span id="demo5"></span>
+    <hr>
+
+    <p>Self Invoking Function</p>
+    Number : 6 <br><br>
+    Result : <span id="demo6"></span>
+    <hr>
+
+    <p>Function can be used as values</p>
+    Number1 : 15 <br><br>
+    Number2 : 3  <br><br>
+    Result : <span id="demo7"></span>
+    <hr>
+
+    <p>Function can be used as Expressions</p>
+    Number1 : 15 <br><br>
+    Number2 : 3  <br><br>
+    Result : <span id="demo8"></span>
+    <hr>
+
+    <p>Function are Objects</p>
+    <br>
+    <p>The typeof operator in JavaScript returns "function" for functions</p>
+    <p>But, JavaScript functions can best be described as objects.</p>
+    <p>JavaScript functions have both properties and methods.</p>
+    <p>The arguments.length property returns the number of arguments received when the function was invoked</p> <br>
+    No of arguments are using in function : 3 <br><br>
+    To find the no of arguments by using arguments.length <br><br>
+    Result : <span id="demo9"></span>
+    <hr>
+
+    <p>The toString() method returns the function as a string</p>
+    Result : <span id="demo10"></span>
+    <hr>
+
+    <p>Arrow Functions</p>
+    <p>Arrow functions allows a short syntax for writing function expressions.</p>
+    <p>You don't need the function keyword, the return keyword, and the curly brackets.</p>
+    Addition <br>
+    Number1 : 7 <br>
+    Number2 : 7 <br>
+    Result : <span id="demo11"></span> <br><br>
+    Multiplication <br>
+    Number1 : 8 <br>
+    Number2 : 8 <br>
+    Result : <span id="demo12"></span><br><br>
+    <hr>
+
+    <script type="text/javascript">
+        var x = myFunction1(4, 3);
+        document.getElementById("demo1").innerHTML = x;
+        function myFunction1(a, b) {
+        return a * b;
+        }
+
+        var y = function(a,b) {return a*b}
+        document.getElementById("demo2").innerHTML = y(15,3);
+
+        document.getElementById("demo3").innerHTML = y;
+
+        var myfunction = new Function("a","b","return a * b");
+        var z = myfunction(5,5);
+        document.getElementById("demo4").innerHTML = z;
+
+        var a1 = myfunction11(5);
+        function myfunction11(a){
+            return a * a;
+        }
+        document.getElementById("demo5").innerHTML = a1;
+
+        (function (){
+            document.getElementById("demo6").innerHTML = "Hello! I am calling myself and multipling the numbers 6*6 and the result is : "+ (6*6)
+        })();
+
+        function myFunction12(a,b){
+            return a * b;
+        }
+        var a2 = myFunction12(15,3);
+        document.getElementById("demo7").innerHTML = a2;
+        var a3 = myFunction12(15,3) * 2;
+        document.getElementById("demo8").innerHTML = a3;
+
+        function myfunction123(a,b,c){
+            return arguments.length;
+        }
+        document.getElementById("demo9").innerHTML = myfunction123(1,2,3);
+        document.getElementById("demo10").innerHTML = myfunction123.toString();
+
+        //ES5
+        var a13 = function(x,y){
+            return x + y;
+        }
+        document.getElementById("demo11").innerHTML = a13(7,7);
+        //ES6
+        const a14 = (x,y) => x * y;
+        document.getElementById("demo12").innerHTML = a14(8,8);
+    </script>
+</body>
+</html>

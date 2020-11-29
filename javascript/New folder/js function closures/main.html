@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js function closures</title>
+    <link rel="stylesheet" href="main.css">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h3>Global variable</h3>
+        <p class="text-color">
+            Variables created without a declaration keyword (var, let, or const) are always global, even if they are created inside a function. <br>
+            Global variables can be used (and changed) by all scripts in the page (and in the window).
+        </p>
+        <p>
+            a = 2; <br>
+            <button onclick="myfunction()" class="btn btn-outline-warning">click here to know result</button>
+        </p>
+        Result: a * a = 
+        <span id="demo1"></span> <br><hr>
+        <h3>Local variable</h3>
+        <p class="text-color">
+            A local variable can only be used inside the function where it is defined. It is hidden from other functions and other scripting code.
+        </p>
+        <p>
+            a = 4; <br>
+            <button onclick="myfunction1()" class="btn btn-outline-warning">click here to know result</button>
+        </p>
+        Result: a * a = 
+        <span id="demo2"></span><hr>
+        <h3>A Counter Dilemma</h3>
+        <span>Counter: </span>
+        <span id="demo3"></span><br>
+        <span id="demo4"></span><br>
+        <span id="demo5"></span><br><hr>
+        <h3>Javascript Nested Functions</h3>
+        Counter: 
+        <span id="demo6"></span><br><hr>
+        <h3>Javascript Closures</h3>
+        <button class="btn btn-outline-warning" onclick="myfunction2()">count</button><br>
+        Counter:
+        <span id="demo7"></span>
+        <script>
+            var a = 2;
+            function myfunction(){
+                return document.getElementById("demo1").innerHTML = a*a;
+            }
+            function myfunction1(){
+                var a = 4;
+                return document.getElementById("demo2").innerHTML = a*a;
+            }
+            var counter = 0;
+            function add(){
+                counter += 1;
+            }
+            add();
+            add();
+            add();
+            document.getElementById("demo3").innerHTML = counter;
+            var counter1 = 0;
+            function add1(){
+                var counter1 = 0;
+                counter1 += 1;
+            }
+            add1();
+            add1();
+            add1();
+            document.getElementById("demo4").innerHTML = counter1;
+            function add2(){
+                var counter3 = 0;
+                counter3 += 1;
+                return document.getElementById("demo5").innerHTML = counter3;
+
+            }
+            add2();
+            add2();
+            add2();
+            function add3(){
+                var counter = 0;
+                function plus(){counter+=1;}
+                plus();
+                return counter;
+            }
+            document.getElementById("demo6").innerHTML = add3();
+            var add4 = (function (){
+                var counter = 0;
+                return function(){ counter+=1; return counter;}
+            })();
+            function myfunction2(){
+                return document.getElementById("demo7").innerHTML = add4();
+            }
+        </script>
+    </div>
+</body>
+</html>

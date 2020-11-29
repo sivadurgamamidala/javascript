@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js break and continue statement</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <script>
+        var i=0;
+        var a="";
+        for(i;i<10;i++){
+            if(i==5){
+                break;
+            }
+            a+="number is "+i+"<br>";
+        }
+        document.getElementById("demo1").innerHTML=a;
+        var j=0;
+        var b="";
+        for(j;j<10;j++){
+            if(j==5){
+               // b+="<br>";
+                continue;
+            }
+            b+="number is "+j+"<br>";
+        }
+        document.getElementById("demo2").innerHTML=b;
+        var k=["shiva","durga","teja","mamidala"];
+        var c="";
+        list:{
+            c+=k[0]+"<br>";
+            c+=k[1]+"<br>";
+            break list;
+            c+=k[2]+"<br>";
+            c+=k[3]+"<br>";
+            
+        }
+        document.getElementById("demo3").innerHTML=c;
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js function</title>
+</head>
+<body>
+    <!-- A JavaScript function is a block of code designed to perform a particular task. -->
+    <!-- A JavaScript function is executed when "something" invokes it (calls it). -->
+
+    <!-- This example calls a function which performs a calculation, and returns the result -->
+    <div id="demo"></div>
+    <div id="demo0"></div>
+
+    <script>
+        document.getElementById("demo").innerHTML=myfunction(10,20);
+        document.getElementById("demo0").innerHTML="the temperature is "+celsius(77)+" celsius";
+        function myfunction(x1,x2)
+        {
+            return x1*x2; //funtion return the product of x1 and x2.
+        }
+        function celsius(x){
+            return (5/9 * (x-32));
+        }
+        
+    </script>
+    <!-- why we use function:
+        1.You can reuse code: Define the code once, and use it many times.
+        2.You can use the same code many times with different arguments, to produce different results. 
+    -->
+</body>
+</html>

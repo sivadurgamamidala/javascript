@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js function call</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <h1>All Functions are methods</h1>
+    First Name : shivadurga <br>
+    Second Name : mamidala <br>
+    Full Name : <span id="demo"></span><hr>
+
+    <h1>Javascript call() method</h1>
+    first person full Name: <span id="demo1"></span><br>
+    second person full Name: <span id="demo2"></span><br><hr>
+
+    <h1>The call() methods with arguments</h1>
+    third person name: <span id="demo3"></span><br><hr>
+    <script>
+        var myobj = {
+            firstName : "shiva durga",
+            lastName : "mamidala",
+            fullName : function(){
+                return this.firstName +" "+ this.lastName;
+            }
+        }
+        document.getElementById("demo").innerHTML = myobj.fullName();
+
+        var myobj1 = {
+            fullName : function(){
+                return this.firstName + " " + this.lastName;
+            }
+        }
+        var person1 = {
+            firstName : "shiva Durga",
+            lastName : "Mamidala"
+        }
+        var person2 = {
+            firstName : "Vani Kumari",
+            lastName : "Mamidala"
+        }
+        document.getElementById("demo1").innerHTML = myobj1.fullName.call(person1);
+        document.getElementById("demo2").innerHTML = myobj1.fullName.call(person2);
+
+        var myobj2 ={
+            fullName : function(city,state,country){
+                return this.firstName + " " + this.lastName + "<br>" + "City Name :" + city +"<br>" + "State Name: "+ state +"<br>" + "Country Name: "+ country;
+            }
+        }
+        var person3 = {
+            firstName : "Giri Babu",
+            lastName : "Mamidala"
+        }
+        document.getElementById("demo3").innerHTML = myobj2.fullName.call(person3,"Guntur","Andhra Pradesh","India");
+    </script>
+</body>
+</html>
