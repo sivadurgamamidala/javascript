@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal or global selector</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" ></script>
+    <script>
+        $(document).ready(function(){
+            $("*").css("color","purple");
+            $("*").css("border","1px ridge red")
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <ul>
+            <h1 style="text-align: center;">Universal or global selector</h1>
+            <li>
+                <p>It target all the elements or tags including html and body.</p>
+            </li>
+            <li>
+                <u>It represented with (*) symbol.</u>
+            </li>
+        </ul>
+        
+    </div>
+</body>
+</html>
