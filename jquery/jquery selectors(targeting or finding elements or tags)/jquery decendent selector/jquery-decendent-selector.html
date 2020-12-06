@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>decendent selector</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"       >
+
+    <!-- jQuery and JS bundle w/ Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./jquery/jquery-3.5.1.js"></script>
+    <script>
+        $(function(){
+            $("div div1 h4").css("color","purple");//parent child grandChild
+            $("div h4").css("text-align","center");//parent grandChild
+            $("div1 h4").css("text-transform","uppercase");//child grandChild
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div1>
+            <h4>shiva durga mamidala</h4><br>
+            <div>
+                <p id="demo">hello world!</p>
+            </div>
+        </div1>
+    </div>
+</body>
+</html>

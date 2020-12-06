@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Child selector</title>
+    <script src="./jquery/jquery-3.5.1.js"></script>
+    <script>
+        $(function(){
+            $('div>h4').css("color","purple");
+            $('div>div').css("color","green");
+            $('div>div>ul>li').css("color","dodgerBlue");
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <h4>shiva durga mamidala</h4>
+        <div>
+            lists:
+            <ul>
+                <li>hai shiva</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

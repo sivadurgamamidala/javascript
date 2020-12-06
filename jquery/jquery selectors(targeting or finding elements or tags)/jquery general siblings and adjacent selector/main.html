@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>general sibling and adjacent selector</title>
+    <script src="./jquery/jquery-3.5.1.js"></script>
+    <script>
+        $(function(){
+            $('p~h1').css("color","green");//after p it targets all h1 tags(example for general sibling)
+            $('div+h2').css("color","red");//after div it targets all h2(example for adjacent sibling selector)
+        });
+    </script>
+</head>
+<body>
+    <p>paragraph</p>
+    <h1>heading 1</h1>
+    <h1>heading 2</h1>
+    <div>paragraph</div>
+    <h2>heading 3</h2>
+    <h2>heading 4</h2>
+</body>
+</html>
